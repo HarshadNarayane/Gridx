@@ -2,3 +2,6 @@ Although also based on Dojo store, Gridx has a completely different architecture
 
 This article is a brief introduction on how to use Gridx. Gridx is still under development, and some APIs and implementation details are still up to change. But its basic usage and architecture is already stable.
 
+1. Creation
+2. Basic APIs
+3. Modules
