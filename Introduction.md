@@ -17,16 +17,13 @@ Assume we have an HTML page like this:
 &lt;/html&gt;
 </pre>
 First, let's import the CSS file for Gridx:
-
 <pre>
 &lt;link rel="stylesheet" href="gridx/resources/claro/Gridx.css" /&gt;
 </pre>
-
 Currently only claro theme is available. If you need to run grid in RTL mode, use the following instead:
 <pre>
 &lt;link rel="stylesheet" href="gridx/resources/claro/Gridx_rtl.css" /&gt;
 </pre>
-
 The JavaScript modules we must "require" are:
 	1. A kind of store, for example: dojo/store/Memory
 	2. gridx/Grid
@@ -66,6 +63,7 @@ var grid = new Grid({
 grid.startup();
 </pre>
 Gridx inherits dijit._WidgetBase, so all the widget tricks are available. 
+
 This grid is extremely basic but solid. Lots of modules can be added to it flexibly without blocking each other. We'll see how this works in later sections.
 
 2. Basic APIs
