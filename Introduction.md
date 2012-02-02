@@ -2,13 +2,13 @@ Although also based on Dojo store, Gridx has a completely different architecture
 
 This article is a brief introduction on how to use Gridx. Gridx is still under development, and some APIs and implementation details are still up to change. But its basic usage and architecture is already stable.
 
-# 1. Creation
+## 1. Creation
 Assume we have an HTML page like this:
 <pre>
 &lt;html&gt;
 &lt;head&gt;
 	&lt;title&gt;Gridx Demo&lt;/title&gt;
-	&lt;script type=&quot;text/javascript&quot; src=&quot;../../dojo/dojo.js&quot; data-dojo-config=&quot;async: true&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;dojo/dojo.js&quot; data-dojo-config=&quot;async: true&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- We&#039;d like to show a grid here --&gt;
@@ -17,14 +17,15 @@ Assume we have an HTML page like this:
 &lt;/html&gt;
 </pre>
 First, let's import the CSS file for Gridx:
-	&lt;link rel="stylesheet" href="gridx/resources/claro/Gridx.css" /&gt;
+	'&lt;link rel="stylesheet" href="gridx/resources/claro/Gridx.css" /&gt;'
 Currently only claro theme is available. If you need to run grid in RTL mode, use the following instead:
-	&lt;link rel="stylesheet" href="gridx/resources/claro/Gridx_rtl.css" /&gt;
+	'&lt;link rel="stylesheet" href="gridx/resources/claro/Gridx_rtl.css" /&gt;'
 The JavaScript modules we must "require" are:
 	1. A kind of store, for example: dojo/store/Memory
 	2. gridx/Grid
 	3. gridx/core/model/cache/Sync (for client store) or gridx/core/model/cache/Async (for server store)
 Assume we are creating a grid upon dojo.store.Memory, here's what we need:
+`
 require([
 	'dojo/store/Memory',
 	'gridx/Grid',
@@ -39,21 +40,24 @@ require([
 	});
 	......
 });
+`
 Similar to DataGrid/EnhancedGrid, column structure is also necessary:
-	var columns = [
-		{field: 'id', name: 'Identity'},
-		{field: 'title', name: 'Title'},
-		{field: 'artist', name: 'Artist'}
-	];
+`
+var columns = [
+	{field: 'id', name: 'Identity'},
+	{field: 'title', name: 'Title'},
+	{field: 'artist', name: 'Artist'}
+];
+`
 OK, now everything's ready, we can create our simple grid:
-
+`
 var grid = new Grid({
 	cacheClass: Cache,
 	store: store,
 	structure: columns
 }, 'gridNode');	//Assume we have a node with id 'gridNode'
 grid.startup();
-
+`
 Gridx inherits dijit._WidgetBase, so all the widget tricks are available. 
 This grid is extremely basic but solid. Lots of modules can be added to it flexibly without blocking each other. We'll see how this works in later sections.
 
