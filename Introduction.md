@@ -68,5 +68,65 @@ Gridx inherits dijit._WidgetBase, so all the widget tricks are available.
 
 This grid is extremely basic but solid. Lots of modules can be added to it flexibly without blocking each other. We'll see how this works in later sections.
 
-2. Basic APIs
+## 2. Basic APIs
+Gridx introduced API objects: rows, columns and cells. So we can get the id of the second row by:
+<pre>
+var id = grid.row(1).id;
+</pre>
+Get the data of cell at the first row second column by:
+<pre>
+var data = grid.cell(0, 1).data();
+</pre>
+Get the name of the third column by:
+<pre>
+var title = grid.column(2).name();
+</pre>
+Here the return values of function grid.row(), grid.cell() and grid.column() are API objects. They are just a container of a bunch of APIs, so do not have status. That means, if we get a cell object by:
+<pre>
+var cell = grid.cell(0, 0);
+var data1 = cell.data();
+</pre>
+Then we change the data in this cell, and call: 
+<pre>
+var data2 = cell.data();
+</pre>
+Then data2 will be the updated data instead of data1.
+
+To get an array of column names, there's a better API:
+<pre>
+var names = grid.columns().map(function(col){
+	return col.name();
+});
+</pre>
+columns() or rows() returns an array of API objects. They also accept ranges.
+If you need only the first 3 columns, just write:
+<pre>
+grid.columns(0, 3);
+</pre>
+Two columns starting from the second one:
+<pre>
+grid.columns(1, 2);
+</pre>
+All columns starts from the third one:
+<pre>
+grid.columns(2);
+</pre>
+The returned array has been mixed in all the useful array functions like map, filter, forEach, some and every.
+
+Modules can add more methods to API objects. For example, if a sort module is available, we will be able to write:
+<pre>
+grid.column(0).sort();
+</pre>
+
+Other users basic APIs include:
+<pre>
+	grid.setColumns(columnStructure);		//Reset the column structure
+	grid.setStore(store);		//Reset store
+	grid.columnCount();	//Faster than grid.columns().length;
+	grid.rowCount();	//Faster than grid.rows().length;
+	grid.resize();	//This is what layout widgets (containers) need.
+</pre>
+
+Modules have module APIs, which are mixed in deeper levels, so they won't conflict with others and grid itself. More details on module APIs will be covered in the next section.
+
 3. Modules
