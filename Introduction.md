@@ -4,7 +4,7 @@ This article is a brief introduction on how to use Gridx. Gridx is still under d
 
 # 1. Creation
 Assume we have an HTML page like this:
-
+<pre>
 <head>
 	<title>Gridx Demo</title>
 	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
@@ -13,7 +13,7 @@ Assume we have an HTML page like this:
 	<!-- We'd like to show a grid here -->
 	<div id="gridNode" style="width: 400px; height: 300px;"></div>
 </body>
-
+</pre>
 First, let's import the CSS file for Gridx:
 	&lt;link rel="stylesheet" href="gridx/resources/claro/Gridx.css" /&gt;
 Currently only claro theme is available. If you need to run grid in RTL mode, use the following instead:
