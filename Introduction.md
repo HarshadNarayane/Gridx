@@ -40,7 +40,7 @@ require([
 			{id: 1, title: 'Hey There', artist: 'Bette Midler'},
 			{id: 2, title: 'Love or Confusion', artist: 'Jimi Hendrix'},
 			{id: 3, title: 'Sugar Street', artist: 'Andy Narell'}
-	]
+		]
 	});
 	......
 });
