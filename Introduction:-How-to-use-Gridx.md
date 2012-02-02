@@ -11,9 +11,9 @@ The source code of Gridx can be downloaded from GitHub. Now let's get started.
 Experienced users of DataGrid/EnhancedGrid probably know that a grid instance has two major inputs: one is the data store, the other is the column structure. This is still true for Gridx:
 `
 var columns = [
-	{field: 'id', name: 'Identity'},
-	{field: 'title', name: 'Title'},
-	{field: 'artist', name: 'Artist'}
+    {field: 'id', name: 'Identity'},
+    {field: 'title', name: 'Title'},
+    {field: 'artist', name: 'Artist'}
 ];
 var store = new Memory({...});
 `
