@@ -24,7 +24,7 @@ First, let's import the CSS file for Gridx:
 
 Currently only claro theme is available. If you need to run grid in RTL mode, use the following instead:
 <pre>
-	&lt;link rel="stylesheet" href="gridx/resources/claro/Gridx_rtl.css" /&gt;
+&lt;link rel="stylesheet" href="gridx/resources/claro/Gridx_rtl.css" /&gt;
 </pre>
 
 The JavaScript modules we must "require" are:
@@ -32,7 +32,7 @@ The JavaScript modules we must "require" are:
 	2. gridx/Grid
 	3. gridx/core/model/cache/Sync (for client store) or gridx/core/model/cache/Async (for server store)
 Assume we are creating a grid upon dojo.store.Memory, here's what we need:
-`
+<pre>
 require([
 	'dojo/store/Memory',
 	'gridx/Grid',
@@ -47,24 +47,24 @@ require([
 	});
 	......
 });
-`
+</pre>
 Similar to DataGrid/EnhancedGrid, column structure is also necessary:
-`
+<pre>
 var columns = [
 	{field: 'id', name: 'Identity'},
 	{field: 'title', name: 'Title'},
 	{field: 'artist', name: 'Artist'}
 ];
-`
+</pre>
 OK, now everything's ready, we can create our simple grid:
-`
+<pre>
 var grid = new Grid({
 	cacheClass: Cache,
 	store: store,
 	structure: columns
 }, 'gridNode');	//Assume we have a node with id 'gridNode'
 grid.startup();
-`
+</pre>
 Gridx inherits dijit._WidgetBase, so all the widget tricks are available. 
 This grid is extremely basic but solid. Lots of modules can be added to it flexibly without blocking each other. We'll see how this works in later sections.
 
