@@ -111,14 +111,14 @@ All columns starts from the third one:
 <pre>
 grid.columns(2);
 </pre>
-The returned array has been mixed in all the useful array functions like map, filter, forEach, some and every.
+The returned array has been mixed in all the useful array functions like `map`, `filter`, `forEach`, `some` and `every`.
 
 Modules can add more methods to API objects. For example, if a sort module is available, we will be able to write:
 <pre>
 grid.column(0).sort();
 </pre>
 
-Other users basic APIs include:
+Other useful basic APIs include:
 <pre>
 	grid.setColumns(columnStructure);		//Reset the column structure
 	grid.setStore(store);		//Reset store
