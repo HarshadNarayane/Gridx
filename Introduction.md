@@ -68,8 +68,8 @@ Gridx inherits dijit._WidgetBase, so all the widget tricks are available.
 
 This grid is extremely basic but solid. Lots of modules can be added to it flexibly without blocking each other. We'll see how this works in later sections.
 
-## 2. Basic APIs
-Gridx introduced API objects: rows, columns and cells. So we can get the id of the second row by:
+## 2. Basic APIs and API objects
+Gridx introduced API objects (objects holding APIs): rows, columns and cells. So we can get the id of the second row by:
 <pre>
 var id = grid.row(1).id;
 </pre>
@@ -81,7 +81,7 @@ Get the name of the third column by:
 <pre>
 var title = grid.column(2).name();
 </pre>
-Here the return values of function grid.row(), grid.cell() and grid.column() are API objects. They are just a container of a bunch of APIs, so do not have status. That means, if we get a cell object by:
+Here the return values of function `grid.row()`, `grid.cell()` and `grid.column()` are API objects. They are just a container of a bunch of APIs, so do not have status. That means, if we get a cell object by:
 <pre>
 var cell = grid.cell(0, 0);
 var data1 = cell.data();
@@ -98,7 +98,7 @@ var names = grid.columns().map(function(col){
 	return col.name();
 });
 </pre>
-columns() or rows() returns an array of API objects. They also accept ranges.
+`columns()` or `rows()` returns an array of API objects. They also accept ranges.
 If you need only the first 3 columns, just write:
 <pre>
 grid.columns(0, 3);
