@@ -25,9 +25,11 @@ Currently only claro theme is available. If you need to run grid in RTL mode, us
 &lt;link rel="stylesheet" href="gridx/resources/claro/Gridx_rtl.css" /&gt;
 </pre>
 The JavaScript modules we must "require" are:
-	1. A kind of store, for example: dojo/store/Memory
-	2. gridx/Grid
+
+	1. A kind of store, for example: dojo/store/Memory<br/>
+	2. gridx/Grid<br/>
 	3. gridx/core/model/cache/Sync (for client store) or gridx/core/model/cache/Async (for server store)
+
 Assume we are creating a grid upon dojo.store.Memory, here's what we need:
 <pre>
 require([
