@@ -224,9 +224,16 @@ Here's a list of currently supported (non-core) modules, more details will be in
 21. FilterBar
 22. Pagination
 23. PaginationBar
-24. move.Row/move.Column
-25. dnd.Row/dnd.Column
-26. select.Row/select.Column/select.Cell
-27. extendedSelect.Row/extendedSelect.Column/extendedSelect.Cell
-28. exporter.CSV/exporter.Table
+24. move.Row
+25. move.Column
+25. dnd.Row
+26. dnd.Column
+26. select.Row
+27. select.Column
+28. select.Cell
+29. extendedSelect.Row
+30. extendedSelect.Column
+31. extendedSelect.Cell
+32. exporter.CSV
+33. exporter.Table
 </pre>
