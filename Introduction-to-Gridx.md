@@ -200,6 +200,7 @@ In this way, each module has its own namespace, so they will not conflict with e
 A module can choose to expose what APIs to grid, and what APIs to API objects (row/column/cell). Note the module name should only be an identifier for the APIs exposed to grid, so that there can be less dependency, and the code will be easier to maintain.
 
 Here's a list of currently supported (non-core) modules, more details will be included in future docs:
+<pre>
 1. CellWidget
 2. ColumnLock
 3. ColumnResizer
@@ -228,3 +229,4 @@ Here's a list of currently supported (non-core) modules, more details will be in
 26. select.Row/select.Column/select.Cell
 27. extendedSelect.Row/extendedSelect.Column/extendedSelect.Cell
 28. exporter.CSV/exporter.Table
+</pre>
