@@ -1,4 +1,6 @@
-# Why Gridx Model
+This article explains the design of Gridx Model in the following aspects: Why? What? How?
+
+# Why Gridx Model?
 
 A Grid usually provides a lot of UI tools to manipulate data, such as filter, sorting, selection, drag & drop, paging, editing, etc. Different UI tools can have different look and feels and even completely different UI design, but their core functionality on data manipulation might be the same. For example, filter is a very useful UI tool of grid, but different requirements will lead to different UI design. A powerful and therefore complicated design might allow complicated filter conditions including logic AND/OR/NOT operators, and automatically recognize data types other than string. However, what if a simple string filter box would just be sufficient? It'll be wonderful if we have a separated filter logic without UI, and a bunch of filter UIs relying on this logic. This idea is called MVC (Model, View, Controller) pattern.
 
@@ -18,7 +20,7 @@ Dojo store is a general purpose data source, and grid is just a "window" to show
 
 There are also other reasons that a Grid Model is necessary. For example, selection and reordering are not supported in store; the filter feature in store (seems the dojo.store.Memory has enhanced this now, but others still haven't) is not powerful enough; And the new store API (dojo.store) was not even stable yet when Gridx was developed. Anyway, a solid base that can be completely controlled by ourselves is very important. If someday the store changes again, don't worry, we only have one place to change: the Gridx Model.
 
-# What's Gridx Model
+# What's Gridx Model?
 
 The Gridx Model is defined by the following set of APIs:
 
