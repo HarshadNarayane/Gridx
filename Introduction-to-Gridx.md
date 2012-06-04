@@ -27,8 +27,8 @@ Currently only claro theme is available. If you need to run grid in RTL mode, pl
 
 And another important step - GridX needs an explicit width/height setting:
 <pre>
-/*applied to a single gridx instance by ID*/
 &lt;style type="text/css"&gt;
+/*applied to a single gridx instance by ID*/
 #grid {
 	height: 100%;
 	width: 100%;
