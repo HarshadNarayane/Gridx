@@ -20,9 +20,26 @@ First, let's import the CSS file for Gridx:
 <pre>
 &lt;link rel="stylesheet" href="gridx/resources/claro/Gridx.css" /&gt;
 </pre>
-Currently only claro theme is available. If you need to run grid in RTL mode, use the following instead:
+Currently only claro theme is available. If you need to run grid in RTL mode, please use the following instead:
 <pre>
 &lt;link rel="stylesheet" href="gridx/resources/claro/Gridx_rtl.css" /&gt;
+</pre>
+
+And another important step - GridX needs an explicit width/height setting:
+<pre>
+/*applied to a single gridx instance by ID*/
+#grid {
+	height: 100%;
+	width: 100%;
+}
+</pre>
+or 
+<pre>
+/*applied to all gridx instances*/
+.gridx { 
+	height: 100%;
+	width: 100%;
+}
 </pre>
 
 The JavaScript modules we must "require" are:<br />
