@@ -59,7 +59,7 @@ If you are using AMD style of coding, it's also a good practice to assign the re
 
 Import CSS files of Gridx into your html file:
 
-	&lt;style type="text/css"&gt;
+	<style type="text/css">
 		//Use claro theme.
 		@import "your/path/to/dijit/themes/claro/claro.css";
 		@import "your/path/to/dijit/themes/claro/document.css";
@@ -69,7 +69,7 @@ Import CSS files of Gridx into your html file:
 
 		//import RTL css if you need to support rtl.
 		@import "your/path/to/gridx/resources/claro/Gridx_rtl.css";
-	&lt;/style&gt;
+	</style>
 
 ## e) Grid width and height
 Gridx does not have a default width or height, which is different from the old DataGrid. So you need to provide them, in anyway you like. For example, in CSS:
