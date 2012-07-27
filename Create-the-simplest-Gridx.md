@@ -33,14 +33,14 @@ Define the columns in an array. A column can be a direct mapping of a field in s
 It's a good practice to provide a meaningful unique ID for every column, so that you can uniquely refer to a column at anytime, no matter where it is moved or how it is modified. If omitted, the grid will use "1", "2", "3", ... as IDs for columns.
 
 ## c) A cache implementation
-Server side stores and client side store are totally different, so different logics are provided to handle them. If you are using only a simple client store, like Memory, there's no need to do any lazy-loading stuff. So tell the grid what kind of store you are using by providing different cache implementations.
+Server side stores and client side stores are totally different, so different logics are provided to handle them. If you are using only a simple client store, like Memory, there's no need to do any lazy-loading stuff. So tell the grid what kind of store you are using by providing different cache implementations.
 
 	//We are using Memory store, so everything is synchronous.
 	var cacheClass = "gridx/core/model/cache/Sync";
 
-By the way, do forget to "require" this class, the grid won't automatically load it for you.
+By the way, do NOT forget to "require" this class, the grid won't automatically load it for you.
 
-If you are using AMD style of coding, it's also a good practice to assign the required cache to an argument, and use that argument directly:
+If you are using AMD style of coding, it's also a good practice to assign the required cache class to an argument, and use that argument directly:
 
 	require([
 		......
@@ -50,7 +50,7 @@ If you are using AMD style of coding, it's also a good practice to assign the re
 		
 		......
 
-		var cacheClass = Cache;
+		var cacheClass = Cache; //Use Cache directly
 
 		......
 	});
