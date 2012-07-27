@@ -108,7 +108,7 @@ When everything is prepared, we can start creating our grid:
 		grid.startup();
 	});
 
-Never forget to call grid.startup(), since the column width calculating and layout rendering need to access the geometry information of grid DOM nodes.
+Never forget to call grid.startup(), since the column width calculation and layout rendering need to access the geometry information of grid DOM nodes.
 
 # 3. Run the page
 OK, now we are done.
