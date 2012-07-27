@@ -1,4 +1,4 @@
-The simplest gridx does not have any extra modules and extensions, and it is fed by a client store. It can do hardly no more than a native html table, but it's a solid base and a good start for advanced features. That's why we call it Gridx, an extensible grid.
+The simplest gridx does not have any extra modules or extensions, and it is fed by a client store. It can do hardly no more than a native html table, but it's a solid base and a good start for advanced features. That's why we call it Gridx, an extensible grid.
 
 # 1. Preparation
 
