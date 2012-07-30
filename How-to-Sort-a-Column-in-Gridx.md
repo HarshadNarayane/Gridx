@@ -85,7 +85,7 @@ The only thing that needs to be remembered is to refresh the body after the grid
 
 Sort modules are very simple, but there're still 2 parameters that need some discussion:
 
-1. initialOrder
+### 1. initialOrder
 When this parameter is provided when creating Gridx, the corresponding column will appear sorted as soon as the grid is created. That means you'll see the little triangles in the column header as well as the sorted data. For example:
 	
 		var grid = new Grid({
@@ -122,8 +122,9 @@ or
 
 Both ways work, because `initialOrder` is a module paramter. That also means, If you implement a sort module that does not support it, it'll be of no use.
 
-2. baseSort
+### 2. baseSort
 This is a parameter of the Sort model extension. So it is only a grid parameter, and you don't need to put a "sort" string in front of it.
+
 		var grid = new Grid({
 			id: 'grid',
 			cacheClass: Cache,
