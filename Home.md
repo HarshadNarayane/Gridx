@@ -1,4 +1,6 @@
-#### Welcome to GridX Tutorial & Doc Home, we are still in progress to enrich the turotials, thanks for your continious support on gridx!
+##### Welcome to GridX Tutorial & Doc Home, we are still in progress to enrich the tutorials. 
+
+##### Thanks for your continious support on gridx!
 
 
 #### Tutorials
