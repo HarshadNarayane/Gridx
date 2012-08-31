@@ -1,5 +1,4 @@
-
-#### Welcome to GridX [tutorial & doc home](https://github.com/oria/gridx/wiki), we are still in progress to enrich the tutorials. 
+#### Welcome to [gridx tutorial & doc home](https://github.com/oria/gridx/wiki), we are still in progress to enrich the tutorials. 
 
 #### Tutorials
 
