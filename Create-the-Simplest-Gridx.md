@@ -60,14 +60,14 @@ If you are using AMD style of coding, it's also a good practice to assign the re
 Import CSS files of Gridx into your html file:
 
 	<style type="text/css">
-		//Use claro theme.
+		/*Use claro theme.*/
 		@import "your/path/to/dijit/themes/claro/claro.css";
 		@import "your/path/to/dijit/themes/claro/document.css";
 
-		//Import the main CSS file of Gridx.
+		/*Import the main CSS file of Gridx.*/
 		@import "your/path/to/gridx/resources/claro/Gridx.css";
 
-		//import RTL css if you need to support rtl.
+		/*import RTL css if you need to support rtl.*/
 		@import "your/path/to/gridx/resources/claro/Gridx_rtl.css";
 	</style>
 
