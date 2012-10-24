@@ -71,7 +71,7 @@ Since the sorting work is done in the store, so it is the functionality of grid 
 		store: store,
 		structure: structure,
 		//Declare the Sort model extension, if no modules are declaring it for you.
-		modelExtension: [
+		modelExtensions: [
 			"gridx/core/model/extensions/Sort"
 		]
 	});
