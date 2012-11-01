@@ -1,8 +1,8 @@
-## version 1.0: 2012/8/2
+### version 1.0: 2012/8/2
     The first major version of gridx.
-## version 1.0.1: 2012/10/15
+### version 1.0.1: 2012/10/15
     Merged in all fixes since version 1.0
-## version 1.0.2: 2012/11/1
+### version 1.0.2: 2012/11/1
     Fixes includes:
          1. Make re-filter possible after store is changed
          2. Fix IE can not click hscroller empty area to scroll issue
