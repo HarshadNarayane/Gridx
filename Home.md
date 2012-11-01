@@ -17,3 +17,6 @@
 
 #### API Doc
 * [gridx v1.0 API doc] (http://oria.github.com/gridx/doc/gridx.html)
+
+#### Release Notes
+* [gridx v1.0.*] ()
