@@ -1,4 +1,4 @@
-# version 1.0: 2012/8/2
+## version 1.0: 2012/8/2
     The first major version of gridx.
 ## version 1.0.1: 2012/10/15
     Merged in all fixes since version 1.0
