@@ -15,3 +15,14 @@
          9. Fix rowid can not contain "+" issue for IE
     Improvements includes:
          A11y improved.
+### version 1.0.3: 2012/11/24
+    Fixes includes:
+         1. Add missing ";" in css
+         2. Fix quick filter template
+         3. Fix filter dialog check value validness
+         4. Select option label should be string
+         5. Fix drop down pager css class name
+         6. Fix column resize cursor in Mac
+         7. Fix row selection when filter is on
+         8. Fix clear filter confirm dialog not focused issue
+         9. Fix row header
