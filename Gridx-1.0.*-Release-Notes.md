@@ -26,3 +26,5 @@
          7. Fix row selection when filter is on
          8. Fix clear filter confirm dialog not focused issue
          9. Fix row header
+### version 1.0.4: 2012/1/4
+    Fix defects.
