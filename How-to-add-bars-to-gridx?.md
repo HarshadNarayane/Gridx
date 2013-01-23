@@ -5,7 +5,7 @@ The Bar module locates at gridx/modules/Bar. It allows you to freely define how 
 Now let's see how to achieve all these using the Bar module:
 
 <pre>
-     <div id='grid' jsid='grid' data-dojo-type='gridx/Grid' data-dojo-props='
+     &lt;div id='grid' jsid='grid' data-dojo-type='gridx/Grid' data-dojo-props='
           cacheClass: "gridx/core/model/cache/Sync",
           store: store,
           structure: layout,
@@ -23,7 +23,7 @@ Now let's see how to achieve all these using the Bar module:
                "gridx/modules/Filter",
                "gridx/modules/Bar"
           ]
-     '></div>
+     '&gt;&lt;/div&gt;
 </pre>
 
 Of course all these resources must be required first. And let's assume the "store" and "structure" parameter are properly set.
