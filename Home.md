@@ -14,7 +14,9 @@
 
 * [What is Gridx Model?] (https://github.com/oria/gridx/wiki/Gridx-Model)
 
-* [How to add bars to gridx? (v1.1)] (https://github.com/oria/gridx/wiki/How-to-add-bars-to-gridx%3F-%5Bv1.1%5D)
+* [How to add bars to gridx? [v1.1]] (https://github.com/oria/gridx/wiki/How-to-add-bars-to-gridx%3F-%5Bv1.1%5D)
+
+* [What is a supporting widget of gridx? [v1.1]] (https://github.com/oria/gridx/wiki/What-is-a-supporting-widget-of-gridx%3F-%5Bv1.1%5D)
 
 
 #### API Doc
