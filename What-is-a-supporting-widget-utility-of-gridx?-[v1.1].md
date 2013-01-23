@@ -1,6 +1,6 @@
 A gridx supporting widget or utility is anything that works for a gridx. It is not a part of gridx, even if it has some UI. 
 
-In Gridx 1.1, supporting widgets and utilities are moved out of the gridx/modules/ directory and placed in a separate one: gridx/support/. Currently there are 7 supporting widgets and 3 supporting functions:
+In Gridx 1.1, supporting widgets and utilities are moved out of the `gridx/modules/` directory and placed in a separate one: `gridx/support/`. Currently there are 7 supporting widgets and 3 supporting functions:
 
 <table>
 <tr><th>Supporter</th><th>Type</th><th>Sample</th></tr>
