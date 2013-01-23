@@ -47,7 +47,7 @@ barTop: [
      ],
 </pre>
 
-Now the barTop represents a whole `&lt;table&gt;`, which includes several sub-arrays as `&lt;tr&gt;`s.
+Now the barTop represents a whole `<table>`, which includes several sub-arrays as `<tr>`s.
 
 Finally let's pay attention to what can be declared as an item (a `<td>`, in other words). We've already seen that an item can be a string (indicating a class name), and also a configuration object. The complete structure of the object is:
 
@@ -115,7 +115,7 @@ barTop: [
 
 ![Arbitrary html in gridx bar](http://oria.github.com/gridx/tutor/image/gridx-4.png)
 
-And if a falsy value is declared as an item, a empty <td> will be inserted. This is useful for multiple bar rows.
+And if a falsy value is declared as an item, a empty `<td>` will be inserted. This is useful for multiple bar rows.
 
 barTop: [
      [ Summary, QuickFilter ],
