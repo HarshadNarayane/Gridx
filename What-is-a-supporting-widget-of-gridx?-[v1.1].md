@@ -4,7 +4,7 @@ In Gridx 1.1, supporting widgets and utilities are moved out of the `gridx/modul
 
 <table>
 <tr><th>Supporter</th><th>Type</th><th>Sample</th></tr>
-<tr><td>LinkPager</td><td>Widget</td><td><img src="oria.github.com/gridx/tutor/image/gridx-5.png" /></td></tr>
+<tr><td>LinkPager</td><td>Widget</td><td><img src="http://oria.github.com/gridx/tutor/image/gridx-5.png" /></td></tr>
 <tr><td>LinkSizer</td><td>Widget</td><td>![LinkSizer](oria.github.com/gridx/tutor/image/gridx-6.png)</td></tr>
 <tr><td>DropDownPager</td><td>Widget</td><td>![DropDownPager](oria.github.com/gridx/tutor/image/gridx-7.png)</td></tr>
 <tr><td>DropDownSizer</td><td>Widget</td><td>![DropDownSizer](oria.github.com/gridx/tutor/image/gridx-8.png)</td></tr>
