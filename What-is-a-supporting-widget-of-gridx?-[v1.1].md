@@ -4,16 +4,16 @@ In Gridx 1.1, supporting widgets and utilities are moved out of the `gridx/modul
 
 <table>
 <tr><th>Supporter</th><th>Type</th><th>Sample</th></tr>
-<tr><td>LinkPager</td><td>Widget</td><td></td></tr>
-<tr><td>LinkSizer</td><td>Widget</td><td></td></tr>
-<tr><td>DropDownPager</td><td>Widget</td><td></td></tr>
-<tr><td>DropDownSizer</td><td>Widget</td><td></td></tr>
-<tr><td>GotoPageButton</td><td>Widget</td><td></td></tr>
-<tr><td>Summary</td><td>Widget</td><td></td></tr>
-<tr><td>QuickFilter</td><td>Widget</td><td></td></tr>
-<tr><td>exporter/toCSV</td><td>Function</td><td></td></tr>
-<tr><td>exporter/toTable</td><td>Function</td><td></td></tr>
-<tr><td>printer</td><td>Function</td><td></td></tr>
+<tr><td>LinkPager</td><td>Widget</td><td>![LinkPager](oria.github.com/gridx/tutor/image/gridx-5.png)</td></tr>
+<tr><td>LinkSizer</td><td>Widget</td><td>![LinkSizer](oria.github.com/gridx/tutor/image/gridx-6.png)</td></tr>
+<tr><td>DropDownPager</td><td>Widget</td><td>![DropDownPager](oria.github.com/gridx/tutor/image/gridx-7.png)</td></tr>
+<tr><td>DropDownSizer</td><td>Widget</td><td>![DropDownSizer](oria.github.com/gridx/tutor/image/gridx-8.png)</td></tr>
+<tr><td>GotoPageButton</td><td>Widget</td><td>![GotoPageButton](oria.github.com/gridx/tutor/image/gridx-9.png)</td></tr>
+<tr><td>Summary</td><td>Widget</td><td>![Summary](oria.github.com/gridx/tutor/image/gridx-10.png)</td></tr>
+<tr><td>QuickFilter</td><td>Widget</td><td>![QuickFilter](oria.github.com/gridx/tutor/image/gridx-11.png)</td></tr>
+<tr><td>exporter/toCSV</td><td>Function</td><td>N/A</td></tr>
+<tr><td>exporter/toTable</td><td>Function</td><td>N/A</td></tr>
+<tr><td>printer</td><td>Function</td><td>N/A</td></tr>
 </table>
 
 Note that exporter and printer are now just functions, accepting a gridx instance as their first argument:
