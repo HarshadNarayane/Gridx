@@ -13,6 +13,7 @@ var grid = new Grid({
 
 Note that it is also compatible with the virtual scroll module `VirtualVScroller`:
 
+<pre>
 var grid = new Grid({
      ......
      modules: [
@@ -20,6 +21,7 @@ var grid = new Grid({
           "gridx/modules/VirtualVScroller"
      ]
 });
+</pre>
 
 The idea of this module is to use the moving distance during touch move gesture to set the `scrollTop`/`scrollLeft` of the scroll bar.
 
