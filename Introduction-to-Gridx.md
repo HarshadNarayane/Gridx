@@ -2,6 +2,8 @@ Although also based on Dojo store, Gridx has a completely different architecture
 
 This article is a brief introduction on how to use Gridx. Gridx is still under development, and some APIs and implementation details are still up to change. But its basic usage and architecture is already stable.
 
+![gridx demo](http://oria.github.com/gridx/tutor/image/gridx-1.png)
+
 ## 1. Creation
 Assume we have an HTML page like this:
 <pre>
