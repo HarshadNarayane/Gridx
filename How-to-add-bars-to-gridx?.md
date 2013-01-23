@@ -1,5 +1,6 @@
 The Gridx UI is designed to be extensible, so that FilterBar, PaginationBar, RowHeader, SummaryBar, QuickFilter, etc can be added, and their height is taken into consideration so that the grid body height is adjusted automatically. This article focuses on horizontal bars on top or bottom of gridx, and introduces you a special module called "Bar".
 The Bar module locates at gridx/modules/Bar. It allows you to freely define how contents should be shown in the bars. Although we already have various bars like filter bar and pagination bar, they are all fixed in UI layout. What if we'd like to show a link-button pager together with a quick filter box? Or switch the postion of pager and page size selector?
+
 ![gridx bar demo](http://oria.github.com/gridx/tutor/image/gridx-2.png)
 
 Now let's see how to achieve all these using the Bar module:
@@ -29,6 +30,7 @@ Now let's see how to achieve all these using the Bar module:
 Of course all these resources must be required first. And let's assume the "store" and "structure" parameter are properly set.
 If you've created a gridx before, the above code should be quite self-explanatory. The "gridx/modules/Bar" must be declared in the "modules" parameter without a doubt because we are right now talking about it. The "gridx/modules/Pagination" and "gridx/modules/Filter" are necessory because our pager and quickfilter need them. (Note this is the good point of separating filter logic from filter bar, and paging logic from pagination bar.) 
 Now let's take a careful look at the barTop and the barBottom parameter. They are actually parameters of the Bar module, but declared as grid-level parameters, which is much more easier and cleaner to write (see Introduction to Gridx). They are all of array type declaring all the stuff you want on a bar, while barTop means "top" bar and barBottom "bottom" bar, without doubt. Actually they can be regarded as a <tr> of html <table> element. Every item in the array corresponds to a <td>. So the barTop in the above example means 3 <td>s and barBottoms means 2 <td>s. A natual extension to this system is to show multiple <tr>s. This is also very straight-forward and I'm quite sure you've already known how to do it without peeking at the following example:
+
 ![multiple rows in gridx bar](http://oria.github.com/gridx/tutor/image/gridx-3.png)
 
 The code is (omitting unchanged parts):
@@ -45,9 +47,9 @@ barTop: [
      ],
 </pre>
 
-Now the barTop represents a whole <table>, which includes several sub-arrays as <tr>s.
+Now the barTop represents a whole `&lt;table&gt;`, which includes several sub-arrays as `&lt;tr&gt;`s.
 
-Finally let's pay attention to what can be declared as an item (a <td>, in other words). We've already seen that an item can be a string (indicating a class name), and also a configuration object. The complete structure of the object is:
+Finally let's pay attention to what can be declared as an item (a `<td>`, in other words). We've already seen that an item can be a string (indicating a class name), and also a configuration object. The complete structure of the object is:
 
 {
      pluginClass: "path/to/class", // string
@@ -57,7 +59,7 @@ Finally let's pay attention to what can be declared as an item (a <td>, in other
      className: "...", // string
 }
 
-Note that the "style" and "className" are set on the <td> (yes, there really exists a <td>). Actually this whole object will be passed to the constructor of the plugin class, so you can also add any plugin parameter here:
+Note that the "style" and "className" are set on the `<td>` (yes, there really exists a `<td>`). Actually this whole object will be passed to the constructor of the plugin class, so you can also add any plugin parameter here:
 
 {
      pluginClass: "gridx/support/LinkPager",
