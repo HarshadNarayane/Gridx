@@ -16,7 +16,7 @@ In Gridx 1.1, supporting widgets and utilities are moved out of the `gridx/modul
 <tr><td>printer</td><td>Function</td><td>N/A</td></tr>
 </table>
 
-Note that exporter and printer are now just functions, accepting a gridx instance as their first argument:
+Note that `exporter` and `printer` are now just functions, accepting a gridx instance as their first argument:
 
 <pre>
 require([
@@ -27,7 +27,7 @@ require([
 });
 </pre>
 
-Although they can be used in the Bar module, as described in this artical, they can also be used separately. For example, you can create a `gridx/support/LinkPager` widget in another area of your page far from the grid it is working for. All you have to do when creating them, is to pass a grid instance:
+Although they can be used in the `Bar` module, as described in [this artical](https://github.com/oria/gridx/wiki/How-to-add-bars-to-gridx%3F-%5Bv1.1%5D), they can also be used separately. For example, you can create a `gridx/support/LinkPager` widget in another area of your page far from the grid it is working for. All you have to do when creating them, is to pass a grid instance:
 
 <pre>
 var pager = new LinkPager({
