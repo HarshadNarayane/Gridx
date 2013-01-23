@@ -18,6 +18,8 @@
 
 * [What is a supporting widget of gridx? [v1.1]] (https://github.com/oria/gridx/wiki/What-is-a-supporting-widget-of-gridx%3F-%5Bv1.1%5D)
 
+* [How to make gridx scrollable on iPad? [v1.1]] (https://github.com/oria/gridx/wiki/How-to-make-gridx-scrollable-on-iPad%3F-%5Bv1.1%5DD)
+
 
 #### API Doc
 * [gridx v1.0 API doc (to be removed)] (http://oria.github.com/gridx/doc/gridx.html)
