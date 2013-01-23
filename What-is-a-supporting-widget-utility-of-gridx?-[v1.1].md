@@ -1,4 +1,4 @@
-A gridx supporting widget or utility is anything that works for a gridx. It is not a part of gridx, even if it has some UI. <br/><br/>
+A gridx supporting widget or utility is anything that works for a gridx. It is not a part of gridx, even if it has some UI. 
 
 In Gridx 1.1, supporting widgets and utilities are moved out of the gridx/modules/ directory and placed in a separate one: gridx/support/. Currently there are 7 supporting widgets and 3 supporting functions:
 
@@ -13,7 +13,7 @@ In Gridx 1.1, supporting widgets and utilities are moved out of the gridx/module
 <tr><td>QuickFilter</td><td>Widget</td><td></td></tr>
 <tr><td>exporter/toCSV</td><td>Function</td><td></td></tr>
 <tr><td>exporter/toTable</td><td>Function</td><td></td></tr>
-<tr><td>printer</td><td></td><td>Function</td></tr>
+<tr><td>printer</td><td>Function</td><td></td></tr>
 </table>
 
 Note that exporter and printer are now just functions, accepting a gridx instance as their first argument:
