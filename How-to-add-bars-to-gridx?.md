@@ -110,7 +110,7 @@ barTop: [
 Last but not least, you can also define arbitray html contents in your bar. For example:
 
 barTop: [
-     { content: "<h1>My Grid Title</h1>", style: "color: blue;" }
+     { content: "&lt;h1&gt;My Grid Title&lt;/h1&gt;", style: "color: blue;" }
 ]
 
 ![Arbitrary html in gridx bar](http://oria.github.com/gridx/tutor/image/gridx-4.png)
