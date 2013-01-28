@@ -27,7 +27,6 @@ Also support new stores.
 ### API docs
 Re-organized to make it easier to understand and look-up.
 
-
 ## Refactored Features
 ### PaginationBar module
 Created by gridx/support/Summary, gridx/support/LinkPager and gridx/support/LinkSizer. Now just a shortcut.
@@ -41,22 +40,22 @@ Created directly upon Bar module. Now just a shortcut.
 Refactored to be single functions for each exporter and printer, taking grid as an argument, and moved to gridx/support.
 
 ## Deprecated Features:
-TitleBar module: 1.2. Use Bar module instead.
-exporter modules: 1.2. Use gridx/support/exporter instead
-Printer module: 1.2. Use gridx/support/printer instead
-gridx/modules/barPlugins directory: 1.2. Use gridx/support directly instead
+* TitleBar module: 1.2. Use Bar module instead.
+* exporter modules: 1.2. Use gridx/support/exporter instead
+* Printer module: 1.2. Use gridx/support/printer instead
+* gridx/modules/barPlugins directory: 1.2. Use gridx/support directly instead
 
 ## Experimental Features:
-TouchScroll module
-TouchVScroller module
-RowLock module
-Tree module
+* TouchScroll module
+* TouchVScroller module
+* RowLock module
+* Tree module
 
 ## Other Changes:
-Add Focus to core modules
-Remove module dependency dead-lock check
-Change HOME/END key to move focus to the first/last cell in the current row
-A lot of fixes
+* Add Focus to core modules
+* Remove module dependency dead-lock check
+* Change HOME/END key to move focus to the first/last cell in the current row
+* A lot of fixes
 
 
 
