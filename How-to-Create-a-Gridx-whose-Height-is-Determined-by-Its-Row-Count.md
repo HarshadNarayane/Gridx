@@ -1,6 +1,6 @@
-Usually, Gridx has a user-defined fixed height, and a virtical scroll bar will occur when the rows overflow the body.
+Usually, Gridx has a user-defined fixed height, and a vertical scroll bar will be shown when the number of rows overflow the body.
 
-But sometimes, it is more desired that the grid show every row directly, without the scrollbar. Now you need a Gridx property called `autoHeight`:
+But sometimes, it is desirable that the grid show every row directly, without the scrollbar. Now you need a Gridx property called `autoHeight`:
 
 	var grid = new Grid({
 		......
