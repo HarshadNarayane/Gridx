@@ -1,6 +1,6 @@
 A gridx supporting widget or utility is anything that works for a gridx. It is not a part of gridx, even if it has some UI. 
 
-In Gridx 1.1, supporting widgets and utilities are moved out of the `gridx/modules/` directory and placed in a separate one: `gridx/support/`. Currently there are 7 supporting widgets and 3 supporting functions:
+In Gridx 1.1, supporting widgets and utilities have been moved out of the `gridx/modules/` directory and placed in a separate one called `gridx/support/`. Currently there are 7 supporting widgets and 3 supporting functions:
 
 <table>
 <tr><th>Supporter</th><th>Type</th><th>Sample</th></tr>
@@ -27,7 +27,7 @@ require([
 });
 </pre>
 
-Although they can be used in the `Bar` module, as described in [this artical](https://github.com/oria/gridx/wiki/How-to-add-bars-to-gridx%3F-%5Bv1.1%5D), they can also be used separately. For example, you can create a `gridx/support/LinkPager` widget in another area of your page far from the grid it is working for. All you have to do when creating them, is to pass a grid instance:
+Although they can be used in the `Bar` module, as described in [this article](https://github.com/oria/gridx/wiki/How-to-add-bars-to-gridx%3F-%5Bv1.1%5D), they can also be used separately. For example, you can create a `gridx/support/LinkPager` widget in another area of your page far from the grid it is working for. All you have to do when creating them, is to pass a grid instance:
 
 <pre>
 var pager = new LinkPager({
