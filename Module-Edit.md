@@ -1,4 +1,4 @@
-The Edit Module allows for editing of cells within the grid.
+The Edit Module allows for editing of cells within the grid. Be sure and AMD include `gridx/modules/edit`.
 
 When a grid includes the Edit module, this does not mean that all the cells are immediately editable.  Instead, we must tell the grid which columns contain editable fields.  We do this by setting the column property called `editable` to `true`.  The default is `false` which means that cells in that column are not editable.
 
