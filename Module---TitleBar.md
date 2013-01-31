@@ -1,0 +1,1 @@
+The module called TitleBar adds a title to the top of the table.  The text of the title is provided by the label attribute.
