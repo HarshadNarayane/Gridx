@@ -1,8 +1,8 @@
-The simplest gridx does not have any extra modules or extensions, and it is fed by a client store. It can do hardly no more than a native html table, but it's a solid base and a good start for advanced features. That's why we call it Gridx, an extensible grid.
+The simplest gridx does not have any extra modules or extensions, and it is fed by a client store. It does little more than a native html table, but it's a solid base and a good start for advanced features. That's why we call it Gridx, an extensible grid.
 
 # 1. Preparation
 
-There are 5 things to be prepared before creating a Gridx. Well, believe me, I'm just trying to be precise here. You'll take these stuff for granted if you are familiar with Dojo.
+There are 5 things to be prepared before creating a Gridx. Well, believe me, I'm just trying to be precise here. You'll take this stuff for granted if you are familiar with Dojo.
 
 ## a) A store
 Create a store from dojo/store/*, dojo/data/*, or dojox/data/*.
