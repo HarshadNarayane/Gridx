@@ -27,3 +27,7 @@ var grid = new Grid({
    ...
 });
 </pre>
+
+By adding Edit to your grid, the `cell` object has some additions included:
+
+* `editor()` - returns the Dijit widget that is used to display the editing
