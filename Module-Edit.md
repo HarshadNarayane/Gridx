@@ -31,3 +31,14 @@ var grid = new Grid({
 By adding Edit to your grid, the `cell` object has some additions included:
 
 * `editor()` - returns the Dijit widget that is used to display the editing
+
+Events are also added including
+
+* `onBegin(cell)` - called when editing begins.
+* `onApply(cell, applySuccess)` - called after the changes made by editing have been applied.  `applySuccess` is true if the application of the changes was succesful.
+* `onCancel(cell)` - Called when editing of the cell is canceled.
+
+To add an event handler, the following may be used:
+<pre>
+myGrid.edit.connect(myGrid.edit, "onBegin", function(cell) {...});
+</pre>
