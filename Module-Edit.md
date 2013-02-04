@@ -7,6 +7,9 @@ When a cell is to be edited, a new instance of Dojo widget (Dijit) is created at
 * `props` (`String`) - Set of properties defined on the Dijit Widget
 * `fromEditor` (`function(storeData, gridData)`)
 * `toEditor` (`function(storeData, gridData, cell, editor)`)
+* `constraints` (`Object`) - Additional properties passed to the editor.
+* `useGridData` (`Boolean`) - Should the editor be fed with data from the Store or from the Grid?  The default is `false` which means to use the store data.  This property is not used if `toEditor` is supplied.
+* `valueField` (`String`) - The property of the editor that holds the value.  This is normally `value` which is the default.
 
 When the edit of the cell has finished, the data entered is written back into the store.  We can change how this is achieved by providing a function to be called to apply the change using our own logic.  The property for this is `customApplyEdit` which is a function with the signature `function(cell, value)`.  It is the responsibility of the code to set the value of the cell to be the value passed in as a parameter.
 
