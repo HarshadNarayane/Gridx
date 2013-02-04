@@ -6,7 +6,7 @@ decorator: function(){
       '&lt;span data-dojo-type="dijit.form.CheckBox" ',
       'data-dojo-attach-point="cb" ',
       'data-dojo-props="readOnly: true"',
-      '&gt;&lt;/span&gt;',
+      '&gt;&lt;/span&gt;'
    ].join('');
 },
 </pre>
