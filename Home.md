@@ -11,11 +11,19 @@
 * [How to add bars to gridx? [v1.1]] (https://github.com/oria/gridx/wiki/How-to-add-bars-to-gridx%3F-%5Bv1.1%5D)
 * [What is a supporting widget of gridx? [v1.1]] (https://github.com/oria/gridx/wiki/What-is-a-supporting-widget-of-gridx%3F-%5Bv1.1%5D)
 * [How to make gridx scrollable on iPad? [v1.1]] (https://github.com/oria/gridx/wiki/How-to-make-gridx-scrollable-on-iPad%3F-%5Bv1.1%5DD)
+* [Using Events] (https://github.com/oria/gridx/wiki/Using-Events)
 
 
 #### API Doc
 * [gridx API doc] (http://oria.github.com/gridx/apidoc/index.html)
 * [gridx v1.0 API doc (to be removed)] (http://oria.github.com/gridx/doc/gridx.html)
+
+#### Programmer's Guide - Modules
+* [Title Bar] (https://github.com/oria/gridx/wiki/Module---TitleBar)
+* [Bar] (https://github.com/oria/gridx/wiki/Module-Bar)
+* [Cell Widget] (https://github.com/oria/gridx/wiki/Module-CellWidget)
+* [Edit] (https://github.com/oria/gridx/wiki/Module-Edit)
+* [Select Row] (https://github.com/oria/gridx/wiki/Module-Select-Row)
 
 
 #### Release Notes
