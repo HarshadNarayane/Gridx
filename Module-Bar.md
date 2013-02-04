@@ -12,5 +12,5 @@ Both of these are of type "Array of Objects".  The definition of an object is:
 * plugin - A Dijit Widget instance
 * content - HTML which will be inserted
 
-See also:
+#### See also
 * [How to add bars to gridx?](https://github.com/oria/gridx/wiki/How-to-add-bars-to-gridx%3F-%5Bv1.1%5D)
