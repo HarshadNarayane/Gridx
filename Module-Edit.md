@@ -6,7 +6,7 @@ When a cell is to be edited, a new instance of Dojo widget (Dijit) is created at
 
 * `props` (`String`) - Set of properties defined on the Dijit Widget
 * `fromEditor` (`function(storeData, gridData)`)
-* `toEditor` (`function(storeData, gridData, cell, editor)`)
+* `toEditor` (`function(storeData, gridData, cell, editor)`) - Function is called to populate the editor widget.  The `editor` parameter is a reference to the Dijit widget used to edit the cell.
 * `constraints` (`Object`) - Additional properties passed to the editor.
 * `useGridData` (`Boolean`) - Should the editor be fed with data from the Store or from the Grid?  The default is `false` which means to use the store data.  This property is not used if `toEditor` is supplied.
 * `valueField` (`String`) - The property of the editor that holds the value.  This is normally `value` which is the default.
