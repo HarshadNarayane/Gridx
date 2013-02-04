@@ -3,10 +3,10 @@ The CellWidget module allows a Cell to contain a Dojo Widget (Dijit).  The `deco
 <pre>
 decorator: function(){
    return [
-      '<span data-dojo-type="dijit.form.CheckBox" ',
+      '&lt;span data-dojo-type="dijit.form.CheckBox" ',
       'data-dojo-attach-point="cb" ',
       'data-dojo-props="readOnly: true"',
-      '></span>',
+      '&gt;&lt;/span&gt;',
    ].join('');
 },
 </pre>
