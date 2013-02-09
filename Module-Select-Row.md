@@ -4,9 +4,9 @@ A module argument called `triggerOnCell` takes a boolean value.  By default it i
 
 The following methods are added to the row object:
 
-* `select`
-* `deselect`
-* `isSelected`
+* `select()`
+* `deselect()`
+* `isSelected()`
 
 The following arguments are available to the SelectRow module:
 
