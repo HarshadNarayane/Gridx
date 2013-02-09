@@ -12,4 +12,4 @@ The following arguments are available to the SelectRow module:
 
 * triggerOnCell (Boolean) - Should a click in a cell in the row select the row?
 
-When a new row is selected, the `onSelected(row, rowid)` method of the select.row object is called.  Similarly, a `onDeselected(row, rowid)` method is available when a row is deselected.
+When a new row is selected, the `onSelected(row, rowid)` method of the select.row object is called.  Similarly, a `onDeselected(row, rowid)` method is available when a row is deselected.  The `row` parameter is a reference to the selected row object itself.
