@@ -14,3 +14,5 @@ The `Row` object is a core part of GridX.  It models a Row in the table.  It has
 * `select()`
 * `setRawData(rawData)`
 * `visualIndex()` - Not clear how this differ from `index()`.  Github issue #42 has been raised to track.
+
+A Row object can be retrieved through the GridX method called `row(rowId)`.
