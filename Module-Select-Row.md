@@ -4,12 +4,17 @@ A module argument called `triggerOnCell` takes a boolean value.  By default it i
 
 The following methods are added to the row object:
 
-* select
-* deselect
-* isSelected
+* `select`
+* `deselect`
+* `isSelected`
 
 The following arguments are available to the SelectRow module:
 
 * triggerOnCell (Boolean) - Should a click in a cell in the row select the row?
 
 When a new row is selected, the `onSelected(row, rowid)` method of the select.row object is called.  Similarly, a `onDeselected(row, rowid)` method is available when a row is deselected.  The `row` parameter is a reference to the selected row object itself.
+
+This `select/Row` object can be referenced by `<myGridX>.select.row`.  This object has some methods upon it which include:
+
+* `getSelected()` - Returns an array of selected row ids.
+* `isSelected(rowId)` - Returns `true` if the row described by `rowId` is already selected and `false` otherwise.
