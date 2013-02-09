@@ -4,7 +4,7 @@ The `Row` object is a core part of GridX.  It models a Row in the table.  It has
 * `cells(...)`
 * `data()`
 * `deselect()`
-* `index()`
+* `index()` - Retrieve the index of this row
 * `isSelected()`
 * `item()`
 * `moveTo(...)`
@@ -13,4 +13,4 @@ The `Row` object is a core part of GridX.  It models a Row in the table.  It has
 * `rawData()`
 * `select()`
 * `setRawData(rawData)`
-* `visualIndex()`
+* `visualIndex()` - Not clear how this differ from `index()`.  Github issue #42 has been raised to track.
