@@ -24,6 +24,7 @@
 * [Cell Widget] (https://github.com/oria/gridx/wiki/Module-CellWidget)
 * [Edit] (https://github.com/oria/gridx/wiki/Module-Edit)
 * [Select Row] (https://github.com/oria/gridx/wiki/Module-Select-Row)
+* [Menu] (https://github.com/oria/gridx/wiki/Module-Menu)
 
 
 #### Release Notes
