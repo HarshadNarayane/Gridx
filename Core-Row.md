@@ -1,4 +1,6 @@
-The `Row` object is a core part of GridX.  It models a Row in the table.  It has a number of methods including:
+The `Row` object is a core part of GridX.  It models a Row in the table.  Every row has an identifier which can be retrieved with the `id` property.
+
+It has a number of methods including:
 
 * `cell(...)`
 * `cells(...)`
