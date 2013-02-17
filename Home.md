@@ -29,4 +29,3 @@
 
 #### Release Notes
 * [gridx v1.1](https://github.com/oria/gridx/wiki/Gridx-v1.1.0-Release-Notes)
-* [gridx v1.0.*](https://github.com/oria/gridx/wiki/Gridx-1.0.*-Release-Notes)
