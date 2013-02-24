@@ -1,1 +1,1 @@
-It appears that this module only supports multiple row selection.
+It appears that this module only supports multiple row selection as opposed to the Module Select Row which allows either single or multiple row selection.
