@@ -1,0 +1,1 @@
+It appears that this module only supports multiple row selection.
