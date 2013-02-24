@@ -25,6 +25,7 @@
 * [Edit] (https://github.com/oria/gridx/wiki/Module-Edit)
 * [Select Row] (https://github.com/oria/gridx/wiki/Module-Select-Row)
 * [Menu] (https://github.com/oria/gridx/wiki/Module-Menu)
+* [Extended Select Row] (https://github.com/oria/gridx/wiki/Module-Extended-Select-Row)
 
 
 #### Release Notes
