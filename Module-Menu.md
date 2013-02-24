@@ -6,7 +6,7 @@ The first is called `bind(menuDijit, bindArgs)`.  The first parameter is an inst
 When a menu item is fired, the `gridx.menu.context` property determines what it is that the menu is being applied to.  The properties contained in this are:
 
 * `cell`
-* `column`
+* `column` - Only set when `hookPoint` is `headercell`.
 * `grid`
 * `row`
 
