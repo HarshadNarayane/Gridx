@@ -81,7 +81,7 @@ This seems not very straightforward, I admit. So in gridx 1.2 a new method (call
 { id: 'progress', field: 'progress', name: 'Install Progress',
 	widgetsInCell: true,
 	decorator: function(){
-		return "<button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'></button>";
+		return "&lt;button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'&gt;&lt;/button&gt;";
 	},
 	setCellValue: function(gridData, storeData, cellWidget){
 		this.btn.set('label', gridData);
@@ -106,7 +106,7 @@ Besides this, another 2 methods are available since gridx 1.2 to provide more me
 { id: 'progress', field: 'progress', name: 'Install Progress',
 	widgetsInCell: true,
 	decorator: function(){
-		return "<button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'></button>";
+		return "&lt;button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'&gt;&lt;/button&gt;";
 	},
 	setCellValue: function(gridData, storeData, cellWidget){
 		cellWidget.btn.set('label', gridData);
