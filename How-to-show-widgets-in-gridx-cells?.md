@@ -18,7 +18,8 @@ var grid = new Grid({
 		{ id: 'progress', field: 'progress', name: 'Install Progress',
 			<b><i>widgetsInCell: true,
 			decorator: function(){
-				return "&lt;div data-dojo-type='dijit.ProgressBar' data-dojo-props='maximum: 1' " + "class='gridxHasGridCellValue' style='width: 100%;'&gt;&lt;/div&gt;";
+				return "&lt;div data-dojo-type='dijit.ProgressBar' data-dojo-props='maximum: 1' " + 
+				    "class='gridxHasGridCellValue' style='width: 100%;'&gt;&lt;/div&gt;";
 			}</i></b>
 		}
 	],
