@@ -70,12 +70,12 @@ But remember that the widgets ("cell widget" as a whole) are reused among differ
 		return "&lt;button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'&gt;&lt;/button&gt;";
 	},
 	setCellValue: function(gridData, storeData, cellWidget){
-		this.btn.set('label', gridData);
-		<b><i>if(this.btn._cnnt){
+		cellWidget.btn.set('label', gridData);
+		<b><i>if(cellWidget.btn._cnnt){
 			// Remove previously connected events to avoid memory leak.
-			this.btn._cnnt.remove();
+			cellWidget.btn._cnnt.remove();
 		}
-		this.btn._cnnt = dojo.connect(this.btn, 'onClick', function(e){
+		cellWidget.btn._cnnt = dojo.connect(cellWidget.btn, 'onClick', function(e){
 			alert(gridData);
 			// do your job here......
 		});</i></b>
@@ -92,12 +92,12 @@ This seems not very straightforward, I admit. So in gridx 1.2 a new method (call
 		return "&lt;button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'&gt;&lt;/button&gt;";
 	},
 	setCellValue: function(gridData, storeData, cellWidget){
-		this.btn.set('label', gridData);
+		cellWidget.btn.set('label', gridData);
 	},
 	<b><i>getCellWidgetConnects: function(cellWidget, cell){
 		// return an array of connection arguments
 		return [
-			[this.btn, 'onClick', function(e){
+			[cellWidget.btn, 'onClick', function(e){
 				alert(cell.data());
 				// do your job here.....
 			}]
