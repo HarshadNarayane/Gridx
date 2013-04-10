@@ -12,6 +12,7 @@
 * [What is a supporting widget of gridx? [v1.1]] (https://github.com/oria/gridx/wiki/What-is-a-supporting-widget-of-gridx%3F-%5Bv1.1%5D)
 * [How to make gridx scrollable on iPad? [v1.1]] (https://github.com/oria/gridx/wiki/How-to-make-gridx-scrollable-on-iPad%3F-%5Bv1.1%5DD)
 * [How to Customize Sorting in GridX?](https://github.com/oria/gridx/wiki/How-to-Customize-Sorting-in-GridX%3F)
+* [How to show widgets in gridx cells?](https://github.com/oria/gridx/wiki/How-to-show-widgets-in-gridx-cells%3F)
 * [Using Events] (https://github.com/oria/gridx/wiki/Using-Events)
 
 
