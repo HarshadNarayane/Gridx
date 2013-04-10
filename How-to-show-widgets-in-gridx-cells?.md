@@ -43,12 +43,12 @@ In the above example, things are simple because no data converting is needed bef
 	widgetsInCell: true,
 	decorator: function(){
 		return "&lt;div data-dojo-type='dijit.ProgressBar' data-dojo-props='maximum: 1' " +
-			"data-dojo-attach-point='progBar' style='width: 100%;'&gt;&lt;/div&gt;";
+			"<b><i>data-dojo-attach-point='progBar'</i></b> style='width: 100%;'&gt;&lt;/div&gt;";
 	},
-	setCellValue: function(gridData, storeData, cellWidget){
+	<b></i>setCellValue: function(gridData, storeData, cellWidget){
 		var data = doSomethingIntersting(gridData);
 		cellWidget.progBar.set('value', data);
-	}
+	}</i></b>
 }
 </pre>
 
@@ -64,13 +64,14 @@ But remember that the widgets ("cell widget" as a whole) are reused among differ
 	},
 	setCellValue: function(gridData, storeData, cellWidget){
 		this.btn.set('label', gridData);
-		if(this.btn._cnnt){    // Remove previously connected events to avoid memory leak.
+		<b><i>if(this.btn._cnnt){
+			// Remove previously connected events to avoid memory leak.
 			this.btn._cnnt.remove();
 		}
 		this.btn._cnnt = dojo.connect(this.btn, 'onClick', function(e){
 			alert(gridData);
 			// do your job here......
-		});
+		});</i></b>
 	}
 }
 </pre>
@@ -86,7 +87,7 @@ This seems not very straightforward, I admit. So in gridx 1.2 a new method (call
 	setCellValue: function(gridData, storeData, cellWidget){
 		this.btn.set('label', gridData);
 	},
-	getCellWidgetConnects: function(cellWidget, cell){
+	<b><i>getCellWidgetConnects: function(cellWidget, cell){
 		// return an array of connection arguments
 		return [
 			[this.btn, 'onClick', function(e){
@@ -94,7 +95,7 @@ This seems not very straightforward, I admit. So in gridx 1.2 a new method (call
 				// do your job here.....
 			}]
 		];
-	}
+	}</i></b>
 }
 </pre>
 
@@ -120,7 +121,7 @@ Besides this, another 2 methods are available since gridx 1.2 to provide more me
 			}]
 		];
 	},
-	initializeCellWidget: function(cellWidget, cell){
+	<b><i>initializeCellWidget: function(cellWidget, cell){
 		// create extra widgets or manipulate dom nodes that depends on current cell context.
 		cellWidget.anotherButton = new Button({...});
 		cellWidget.domNode.append(cellWidget.anotherButton.domNode);
@@ -128,7 +129,7 @@ Besides this, another 2 methods are available since gridx 1.2 to provide more me
 	uninitializeCellWidget: function(cellWidget, cell){
 		// don't forget to undo the changes you made in initializeCellWidget, so that it can be reused among different rows.
 		cellWidget.anotherButton.destroy();
-	}
+	}</i></b>
 }
 </pre>
 
@@ -139,10 +140,10 @@ If you've ever used DataGrid, you might be familiar with returning widget in the
 <pre>
 { id: 'progress', field: 'progress', name: 'Install Progress',
 	widgetsInCell: true,
-	onCellWidgetCreated: function(cellWidget, column){
+	<b><i>onCellWidgetCreated: function(cellWidget, column){
 		var btn = new Button({...});
 		btn.placeAt(cellWidget.domNode);
-	}
+	}</i></b>
 }
 </pre>
 
