@@ -110,11 +110,9 @@ var data2 = cell.data();
 </pre>
 Then data2 will be the updated data instead of data1.
 
-To get an array of column names, there's a better API:
+To get an array of all columns, there's a better API:
 <pre>
-var names = grid.columns().map(function(col){
-	return col.name();
-});
+var columns = grid.columns();
 </pre>
 `columns()` or `rows()` returns an array of API objects. They also accept ranges.
 If you need only the first 3 columns, just write:
