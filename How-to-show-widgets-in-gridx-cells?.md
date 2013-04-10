@@ -16,14 +16,14 @@ var grid = new Grid({
 	store: someStore,
 	structure: [
 		{ id: 'progress', field: 'progress', name: 'Install Progress',
-			<b>widgetsInCell: true,</b>
-			<b>decorator: function(){
+			<b><i>widgetsInCell: true,
+			decorator: function(){
 				return "&lt;div data-dojo-type='dijit.ProgressBar' data-dojo-props='maximum: 1' " + "class='gridxHasGridCellValue' style='width: 100%;'&gt;&lt;/div&gt;";
-			}</b>
+			}</i></b>
 		}
 	],
 	modules: [
-		<b>"gridx/modules/CellWidget"</b>
+		<b><i>"gridx/modules/CellWidget"</i></b>
 	]
 });
 
