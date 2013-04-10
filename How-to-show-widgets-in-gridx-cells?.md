@@ -12,43 +12,44 @@ Setting value to a widget is usually much faster than creating a new one. This i
 
 <pre>
 var grid = new Grid({
-     cacheClass: 'gridx/core/model/cache/Async',
-     store: someStore,
-     structure: [
-          { id: 'progress', field: 'progress', name: 'Install Progress',
-               widgetsInCell: true,
-               decorator: function(){
-                    return "<div data-dojo-type='dijit.ProgressBar' data-dojo-props='maximum: 1' " +
-                         "class='gridxHasGridCellValue' style='width: 100%;'></div>";
-               }
-          }
-     ],
-     modules: [
-          "gridx/modules/CellWidget"
-     ]
+	cacheClass: 'gridx/core/model/cache/Async',
+	store: someStore,
+	structure: [
+		{ id: 'progress', field: 'progress', name: 'Install Progress',
+			widgetsInCell: true,
+			decorator: function(){
+				return "&lt;div data-dojo-type='dijit.ProgressBar' data-dojo-props='maximum: 1' " +
+					 "class='gridxHasGridCellValue' style='width: 100%;'&gt;&lt;/div&gt;";
+			}
+		}
+	],
+	modules: [
+		"gridx/modules/CellWidget"
+	]
 });
+
 </pre>
 
 First, don't forget to require all the necessary resources: the store, the cache, the modules, and the widgets you want to show in the cells. If you still have trouble in creating a gridx, please take a look at this tutorial.
 Second, set **widgetsInCell** to true in the columns that you want to show widgets. The CellWidget module will only be effective on these columns.
 Third, provide the **decorator** function for your **widgetsInCell** columns.
 
-Here comes the first trick: the "decorator" function here does not have any arguments. This is not the case when widgetsInCell is false. Usually the current cell data will be passed, as well as the curent row ID and index. Then why? Because this "decorator" function is now returning a template string, from which a "cell widget" will be created and reused among different rows. If some specific cell data is passed in, how can it be reused then? So this template string must not contain any specific row information. In the above example, a dijit/ProgressBar is put in the template, its arguments are embedded in data-dojo-props. Note the **gridxHasGridCellValue** class, this is the second trick on how widgets get reused. The CellWidget module will automatically find all the widgets with this special class when rendering every row, and call set('value') to set the proper cell data into it.
+Here comes the first trick: the "decorator" function here does not have any arguments. This is not the case when widgetsInCell is false. Usually the current cell data will be passed, as well as the curent row ID and index. Then why? Because this "decorator" function is now returning a template string, from which a "cell widget" will be created and reused among different rows. If some specific cell data is passed in, how can it be reused then? So this template string must not contain any specific row information. In the above example, a dijit/ProgressBar is put in the template, its arguments are embedded in data-dojo-props. Note the **gridxHasGridCellValue** class, this is the second trick on how widgets get reused. The CellWidget module will automatically find all the widgets with this special class when rendering every row, and call `set('value')` to set the proper cell data into it.
 
 In the above example, things are simple because no data converting is needed before `set('value')` to the widget. What if you'd like to do something interesting when setting widgets value? The **setCellValue** function comes to rescue:
 
 <pre>
-          { id: 'progress', field: 'progress', name: 'Install Progress',
-               widgetsInCell: true,
-               decorator: function(){
-                    return "<div data-dojo-type='dijit.ProgressBar' data-dojo-props='maximum: 1' " +
-                         "data-dojo-attach-point='progBar' style='width: 100%;'></div>";
-               },
-               setCellValue: function(gridData, storeData, cellWidget){
-                    var data = doSomethingIntersting(gridData);
-                    cellWidget.progBar.set('value', data);
-               }
-          }
+{ id: 'progress', field: 'progress', name: 'Install Progress',
+	widgetsInCell: true,
+	decorator: function(){
+		return "&lt;div data-dojo-type='dijit.ProgressBar' data-dojo-props='maximum: 1' " +
+			"data-dojo-attach-point='progBar' style='width: 100%;'&gt;&lt;/div&gt;";
+	},
+	setCellValue: function(gridData, storeData, cellWidget){
+		var data = doSomethingIntersting(gridData);
+		cellWidget.progBar.set('value', data);
+	}
+}
 </pre>
 
 The **setCellValue** function will get called every time a row is rendered. When it is called, the widget is already created and you have full control of it. You can set values to the widgets, modify css, or even manipulate the dom nodes and connecting events. The third parameter "cellWidget" in this function refers to the "cell widget" itself, it is the widget that owns the template string returned from the "decorator" function, so you can access any "dojo attach point" defined there. The first and second parameters are grid data and store data for this current cell respectively. They are only different when the "formatter" function is provided. You can also get the current cell from cellWidget.cell, from which you can literally get everything you need.
@@ -56,45 +57,45 @@ The **setCellValue** function will get called every time a row is rendered. When
 But remember that the widgets ("cell widget" as a whole) are reused among different rows. So if you bind some events or changed some dom nodes in the **setCellValue** function, these changes will be retained for another row to be reused. If you just keep "connecting" events without "disconnecting", there will be huge memory leak. So the proper way is to save the connections and disconnect them in setCellValue. For example
 
 <pre>
-          { id: 'progress', field: 'progress', name: 'Install Progress',
-               widgetsInCell: true,
-               decorator: function(){
-                    return "<button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'></button>";
-               },
-               setCellValue: function(gridData, storeData, cellWidget){
-                    this.btn.set('label', gridData);
-                    if(this.btn._cnnt){    // Remove previously connected events to avoid memory leak.
-                         this.btn._cnnt.remove();
-                    }
-                    this.btn._cnnt = dojo.connect(this.btn, 'onClick', function(e){
-                         alert(gridData);
-                         // do your job here......
-                    });
-               }
-          }
+{ id: 'progress', field: 'progress', name: 'Install Progress',
+	widgetsInCell: true,
+	decorator: function(){
+		return "&lt;button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'&gt;&lt;/button&gt;";
+	},
+	setCellValue: function(gridData, storeData, cellWidget){
+		this.btn.set('label', gridData);
+		if(this.btn._cnnt){    // Remove previously connected events to avoid memory leak.
+			this.btn._cnnt.remove();
+		}
+		this.btn._cnnt = dojo.connect(this.btn, 'onClick', function(e){
+			alert(gridData);
+			// do your job here......
+		});
+	}
+}
 </pre>
 
 This seems not very straightforward, I admit. So in gridx 1.2 a new method (callback) is introduced to make this job simpler:
 
 <pre>
-          { id: 'progress', field: 'progress', name: 'Install Progress',
-               widgetsInCell: true,
-               decorator: function(){
-                    return "<button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'></button>";
-               },
-               setCellValue: function(gridData, storeData, cellWidget){
-                    this.btn.set('label', gridData);
-               },
-               getCellWidgetConnects: function(cellWidget, cell){
-                    // return an array of connection arguments
-                    return [
-                         [this.btn, 'onClick', function(e){
-                              alert(cell.data());
-                              // do your job here.....
-                         }]
-                    ];
-               }
-          }
+{ id: 'progress', field: 'progress', name: 'Install Progress',
+	widgetsInCell: true,
+	decorator: function(){
+		return "<button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'></button>";
+	},
+	setCellValue: function(gridData, storeData, cellWidget){
+		this.btn.set('label', gridData);
+	},
+	getCellWidgetConnects: function(cellWidget, cell){
+		// return an array of connection arguments
+		return [
+			[this.btn, 'onClick', function(e){
+				alert(cell.data());
+				// do your job here.....
+			}]
+		];
+	}
+}
 </pre>
 
 With this **getCellWidgetConnects**, gridx can manage the connections for you. Connecting and disconnecting are done automatically.
@@ -102,33 +103,33 @@ With this **getCellWidgetConnects**, gridx can manage the connections for you. C
 Besides this, another 2 methods are available since gridx 1.2 to provide more meaningful names on the job you are doing:
 
 <pre>
-          { id: 'progress', field: 'progress', name: 'Install Progress',
-               widgetsInCell: true,
-               decorator: function(){
-                    return "<button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'></button>";
-               },
-               setCellValue: function(gridData, storeData, cellWidget){
-                    cellWidget.btn.set('label', gridData);
-               },
-               getCellWidgetConnects: function(cellWidget, cell){
-                    // return an array of connection arguments
-                    return [
-                         [cellWidget.btn, 'onClick', function(e){
-                              alert(cell.data());
-                              // do your job here.....
-                         }]
-                    ];
-               },
-               initializeCellWidget: function(cellWidget, cell){
-                    // create extra widgets or manipulate dom nodes that depends on current cell context.
-                     cellWidget.anotherButton = new Button({...});
-                     cellWidget.domNode.append(cellWidget.anotherButton.domNode);
-               },
-               uninitializeCellWidget: function(cellWidget, cell){
-                    // don't forget to undo the changes you made in initializeCellWidget, so that it can be reused among different rows.
-                     cellWidget.anotherButton.destroy();
-               }
-          }
+{ id: 'progress', field: 'progress', name: 'Install Progress',
+	widgetsInCell: true,
+	decorator: function(){
+		return "<button data-dojo-type='dijit.form.Button' data-dojo-attach-point='btn'></button>";
+	},
+	setCellValue: function(gridData, storeData, cellWidget){
+		cellWidget.btn.set('label', gridData);
+	},
+	getCellWidgetConnects: function(cellWidget, cell){
+		// return an array of connection arguments
+		return [
+			[cellWidget.btn, 'onClick', function(e){
+				alert(cell.data());
+				// do your job here.....
+			}]
+		];
+	},
+	initializeCellWidget: function(cellWidget, cell){
+		// create extra widgets or manipulate dom nodes that depends on current cell context.
+		cellWidget.anotherButton = new Button({...});
+		cellWidget.domNode.append(cellWidget.anotherButton.domNode);
+	},
+	uninitializeCellWidget: function(cellWidget, cell){
+		// don't forget to undo the changes you made in initializeCellWidget, so that it can be reused among different rows.
+		cellWidget.anotherButton.destroy();
+	}
+}
 </pre>
 
 As you can see that actually you can do all these stuff in the setCellvalue function. This new approach just provides more semantics, makes your code easier to read and save you some extra comments.
@@ -136,13 +137,13 @@ As you can see that actually you can do all these stuff in the setCellvalue func
 If you've ever used DataGrid, you might be familiar with returning widget in the **formatter** function, and feeling uncomfortable to write template strings.  Then you can use the **onCellWidgetCreated** event and even omit the "decorator" function (since gridx 1.2):
 
 <pre>
-        { id: 'progress', field: 'progress', name: 'Install Progress',
-               widgetsInCell: true,
-               onCellWidgetCreated: function(cellWidget, column){
-                    var btn = new Button({...});
-                    btn.placeAt(cellWidget.domNode);
-               }
-         }
+{ id: 'progress', field: 'progress', name: 'Install Progress',
+	widgetsInCell: true,
+	onCellWidgetCreated: function(cellWidget, column){
+		var btn = new Button({...});
+		btn.placeAt(cellWidget.domNode);
+	}
+}
 </pre>
 
 This **onCellWidgetCreated** is only fired when a new cell widget is created. It won't be fired when widget is reused. So same as the decorator function, no row specific information should be used here.
@@ -154,4 +155,3 @@ Here's a conclusion on how to show widgets in gridx cells:
  4. set widget values and status in **setCellValue** function (optional)
  5. provide event connections in **getCellWidgetConnects** (optional, since 1.2)
  6. do extra manipulation in **initialCellWidget** and **uninitialCellWidget** (optional, since 1.2)
-
