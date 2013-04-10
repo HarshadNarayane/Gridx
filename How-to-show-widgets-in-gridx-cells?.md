@@ -1,4 +1,4 @@
-In gridx column definition, a **decorator** function can be provided to show any HTML/CSS in cell. But sometimes this is not enough. When complicated widgets need to be put into cells, the pure string returned from "decorator" can no longer do the job.  So the **gridx/modules/CellWidget** module shows its value.
+In gridx column definition, a **decorator** function can be provided to show any HTML/CSS in cell. But sometimes this is not enough. When complicated widgets need to be put into cells, the pure string returned from **decorator** can no longer do the job.  So the **gridx/modules/CellWidget** module shows its value.
 
 ![gridx CellWidget](http://oria.github.io/gridx/tutor/image/gridx-12.png)
 
