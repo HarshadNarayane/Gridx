@@ -34,16 +34,16 @@ An event object is passed to your handler function, in which several useful prop
 
 <table>
 <tr><th></th><th>Description</th><th>Available on</th></tr>
-<tr><td>evt.rowId</td><td>The ID of the current row</td><td>Cell, Row, RowHeaderCell</td></tr>
-<tr><td>evt.rowIndex</td><td>The index of the current row under its parent</td><td>Cell, Row, RowHeaderCell</td></tr>
-<tr><td>evt.parentId</td><td>The ID of the parent row of the current row</td><td>Cell, Row, RowHeaderCell</td></tr>
-<tr><td>evt.visualIndex</td><td>The visual index of the current row</td><td>Cell, Row, RowHeaderCell</td></tr>
-<tr><td>evt.columnId</td><td>The ID of the current column</td><td>Cell, HeaderCell</td></tr>
-<tr><td>evt.columnIndex</td><td>The index of the current column</td><td>Cell, HeaderCell</td></tr>
-<tr><td>evt.cellNode</td><td>The DOM node of the current cell</td><td>Cell</td></tr>
-<tr><td>evt.headerCellNode</td><td>The DOM node of the current header cell</td><td>HeaderCell</td></tr>
-<tr><td>evt.rowHeaderCellNode</td><td>The DOM node of the current row header cell</td><td>RowHeaderCell, Row (when isRowHeader is true)</td></tr>
-<tr><td>evt.isRowHeader</td><td>Whether this event is fired from row header</td><td>RowHeaderCell, Row (when isRowHeader is true)</td></tr>
+<tr><td><b>evt.rowId</b></td><td>The ID of the current row</td><td>Cell, Row, RowHeaderCell</td></tr>
+<tr><td><b>evt.rowIndex</b></td><td>The index of the current row under its parent</td><td>Cell, Row, RowHeaderCell</td></tr>
+<tr><td><b>evt.parentId</b></td><td>The ID of the parent row of the current row</td><td>Cell, Row, RowHeaderCell</td></tr>
+<tr><td><b>evt.visualIndex</b></td><td>The visual index of the current row</td><td>Cell, Row, RowHeaderCell</td></tr>
+<tr><td><b>evt.columnId</b></td><td>The ID of the current column</td><td>Cell, HeaderCell</td></tr>
+<tr><td><b>evt.columnIndex</b></td><td>The index of the current column</td><td>Cell, HeaderCell</td></tr>
+<tr><td><b>evt.cellNode</b></td><td>The DOM node of the current cell</td><td>Cell</td></tr>
+<tr><td><b>evt.headerCellNode</b></td><td>The DOM node of the current header cell</td><td>HeaderCell</td></tr>
+<tr><td><b>evt.rowHeaderCellNode</b></td><td>The DOM node of the current row header cell</td><td>RowHeaderCell, Row (when isRowHeader is true)</td></tr>
+<tr><td><b>evt.isRowHeader</b></td><td>Whether this event is fired from row header</td><td>RowHeaderCell, Row (when isRowHeader is true)</td></tr>
 </table>
 
 With the above information, you can easily get whatever you want. For example:
