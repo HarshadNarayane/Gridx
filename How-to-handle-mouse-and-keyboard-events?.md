@@ -19,7 +19,7 @@ The naming convertion is: <b>"on" + regionName + eventName</b>.
 
 For example: **onCellClick**, **onHeaderCellMouseOver**, **onRowKeyDown**, **onRowHeaderHeaderClick**.
 
-Note the "RowHeaderHeader" and "RowHeaderCell" events are only available when the gridx/modules/RowHeader is used.
+Note the "RowHeaderHeader" and "RowHeaderCell" events are only available when the **gridx/modules/RowHeader** is used.
 
 To add handler for any of these events, just connect it on the grid object:
 
