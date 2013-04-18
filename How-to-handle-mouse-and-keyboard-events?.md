@@ -16,6 +16,7 @@ All the following mouse and keyboard events are supported for different parts of
 
 
 The naming convertion is: <b>"on" + regionName + eventName</b>. 
+
 For example: **onCellClick**, **onHeaderCellMouseOver**, **onRowKeyDown**, **onRowHeaderHeaderClick**.
 
 Note the "RowHeaderHeader" and "RowHeaderCell" events are only available when the gridx/modules/RowHeader is used.
