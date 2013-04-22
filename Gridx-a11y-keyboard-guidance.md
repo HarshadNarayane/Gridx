@@ -24,6 +24,6 @@ RowHeader|	UP_ARROW & DOWN_ARROW	|When focus is on a specific row header, press 
 Tree|	CTRL + ->|	When focus is on a specific cell node that has a collapse or expand icon, press the key combination to <br>1. expand tree in LTR mode<br>2. collapse the tree in RTL mode|
 |      |CTRL + <- |	When focus is on a specific cell node that has a collapse or expand icon, press the key combination to <br>1.expand tree in RTL mode  <br>2.collapse the tree in LTR mode|
 |VirtualScroller/VScroller|	HOME	|When focus is on grid vertical scroller bar, press the key to scroll to the first row|
-|    |END|	When focus is on grid vertical scroller bar, press the key to scroll to the laset row|
+|    |END|	When focus is on grid vertical scroller bar, press the key to scroll to the last row|
 |     |PgUp|When focus is on grid vertical scroller bar, press the key scroll up some rows|
 |    |PgDn|	When focus is on grid vertical scroller bar, press the key scroll down some rows.|
