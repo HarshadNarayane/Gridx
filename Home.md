@@ -18,7 +18,6 @@
 
 #### API Doc
 * [gridx API doc] (http://oria.github.com/gridx/apidoc/index.html)
-* [gridx v1.0 API doc (to be removed)] (http://oria.github.com/gridx/doc/gridx.html)
 * [Keyboard Shortcut Guidance](https://github.com/oria/gridx/wiki/Gridx-a11y-keyboard-guidance)
 
 #### Programmer's Guide - Modules
