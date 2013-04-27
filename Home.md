@@ -14,6 +14,7 @@
 * [How to Customize Sorting in GridX?](https://github.com/oria/gridx/wiki/How-to-Customize-Sorting-in-GridX%3F)
 * [How to show widgets in gridx cells?](https://github.com/oria/gridx/wiki/How-to-show-widgets-in-gridx-cells%3F)
 * [How to handle mouse and keyboard events?](https://github.com/oria/gridx/wiki/How-to-handle-mouse-and-keyboard-events%3F)
+* [Add drop down menu on column headers [v1.2]](https://github.com/oria/gridx/wiki/Add-drop-down-menu-on-column-headers-%5Bv1.2%5D)
 
 
 #### API Doc
