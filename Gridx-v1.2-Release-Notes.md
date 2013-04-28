@@ -1,22 +1,22 @@
 # New Features
 ### HiddenColumns
-     Provide APIs to hide/show columns.
+Provide APIs to hide/show columns.
 ### GroupHeader
-     Create multi-level group header.
+Create multi-level group header.
 ### PagedBody
-     Add "Load More" and "Load Previous" buttons to grid body.
+Add "Load More" and "Load Previous" buttons to grid body.
 ### Unselectable Rows
-     Make some rows unselectable.
+Make some rows unselectable.
 ### Edit Lazy Save
-     Not save to store immediately after changes are made in Edit, untial user explicitly requires so. User can undo/redo their changes before saving to store.
+Not save to store immediately after changes are made in Edit, untial user explicitly requires so. User can undo/redo their changes before saving to store.
 ### HeaderRegions
-     Provide a way to add extra focusable regions in column header. Basis of HeaderMenu and NestedSort.
+Provide a way to add extra focusable regions in column header. Basis of HeaderMenu and NestedSort.
 ### HeaderMenu
-     Provide a way to add dropdown menus to column header.
+Provide a way to add dropdown menus to column header.
 ### Adaptive Filter
-     Several predefined header menus for filtering data.
+Several predefined header menus for filtering data.
 ### Tree grid child rows lazy loading and sorting
-     Pass options parameter to getChildren function of store, so that child rows can be paged or sorted by custom logic.
+Pass options parameter to getChildren function of store, so that child rows can be paged or sorted by custom logic.
 
 # Major Improvements:
 Tree module is more compatible with CellWidget module.
