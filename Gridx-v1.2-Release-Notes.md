@@ -1,5 +1,4 @@
-
-# New Features
+# New Features:
 ### HiddenColumns
 Provide APIs to hide/show columns.
 ### GroupHeader
