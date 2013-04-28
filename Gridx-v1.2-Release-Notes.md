@@ -1,4 +1,4 @@
-# New Features:
+## New Features:
 ### HiddenColumns
 Provide APIs to hide/show columns.
 ### GroupHeader
@@ -18,14 +18,14 @@ Several predefined header menus for filtering data.
 ### Tree grid child rows lazy loading and sorting
 Pass options parameter to getChildren function of store, so that child rows can be paged or sorted by custom logic.
 
-# Major Improvements:
+## Major Improvements:
 Tree module is more compatible with CellWidget module.
 
-# Refactored Features:
+## Refactored Features:
 Put visual index management in a separate module View.
 Remove visual index related logic in Body.js and Tree.js
 Refactored ColumnResizer to support GroupHeader
 Refactored NestedSort to take advantage of HeaderRegions.
 
-# Deprecated Features:
+## Deprecated Features:
 Filter api setupFilterQuery is replaced by setupQuery. The old API is still usable but deprecated.
