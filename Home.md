@@ -21,6 +21,7 @@
 #### API Doc
 * [gridx API doc] (http://oria.github.com/gridx/apidoc/index.html)
 * [Keyboard Shortcut Guidance](https://github.com/oria/gridx/wiki/Gridx-a11y-keyboard-guidance)
+* [Modules Compatibility Matrix](http://oria.github.io/gridx/moduleCompatibility.html)
 
 #### Programmer's Guide - Modules
 * [Title Bar] (https://github.com/oria/gridx/wiki/Module---TitleBar)
