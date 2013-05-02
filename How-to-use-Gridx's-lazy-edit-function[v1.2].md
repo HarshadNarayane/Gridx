@@ -1,9 +1,10 @@
-### what is lazy edit
+##what is lazy edit
 
 In Gridx, user can use gridx's edit module to edit data in the cell. After changing the data in the cell and apply the changing, the data will be written back to store immediately. In Gridx 1.2, the lazy edit function is open in the edit module by default.  
 
 Layz edit is a feature that will enable the funcionality of not write uses' changes to the store immediately. User's edit info will be held by Gridx model, and before call model.save(), user can redo and undo their changes. The edited data won't be written back to store until calling model.save() function.
 
+![lazyt edit](https://f.cloud.github.com/assets/1291912/452078/b2c08bb6-b2cc-11e2-93ae-b7eb831a7be6.png)
 
 
 
@@ -19,6 +20,7 @@ The essense of lazy edit is to keep user's edit info at the client side(gridx wi
 
 Using lazy edit is easy. When programmer are using the edit module in gridx, they are using lazy edit implicitly, because lazy edit feature is open by default in edit module.
 
+```javascript
 var grid = new Grid({
     cacheClass: 'gridx/core/model/cache/Async',
     store: someStore,
@@ -32,45 +34,47 @@ var grid = new Grid({
     editLazySave: true                //not necessarily needed, because lazysave is open in edit module by default.
 
 });
-set cache class, store, structure  correctly in the gridx constructor.
-include cellWidget and Edit module in the module config
-set the lazySave config in the edit module to be true.(not necessarily)
+```
+1. set cache class, store, structure  correctly in the gridx constructor.
+2. include cellWidget and Edit module in the module config
+3. set the lazySave config in the edit module to be true.(not necessarily)
 By doing the above processes, if you can run gridx successfully, you can start using the lazy edit feature right now.
 
 
-Key API in lazy edit
+## Key API in lazy edit
 
 Lazy edit feature provide user with some useful API to get some edit funcionality that is easy to use. They are undo(), redo(), save(), clear(). Those APIs are not binded to the gridx.edit object. Since those funcitonality are related to data layer directly, so those APIs are binded to the gridx.model. The model is a core module in gridx for data access.
 
-undo
+**undo**
 
 When user edit some cell data and what to roll back to the last cell status. They can call the function in below way:
-
-    var bool = grid.model.undo();    //true on undo success, otherwise false
-
+```javascript
+     var bool = grid.model.undo();    //true on undo success, otherwise false
+```
 By calling the function, the cell data throughout the grid will be roll back by 1 time. By keeping calling the undo API, user can roll back all the edits and the gridx will look like no edits have even been done on it.
 
-redo
+**redo**
 
 Opposite to undo operation, redo function will help to  re-apply the cell data edit that has been undo just now. They can call the function in below way:
-
-    grid.model.redo();        //true on redo success, otherwise false
-
+```javascript
+     grid.model.redo();        //true on redo success, otherwise false
+```
 By calling this function, the last cell edit operation tha is undo will be restored. By keeping calling the redo API, user can restore the cell data to the current status after calling undo for some times.
 
-clearLazyData
+**clearLazyData**
 
 When user want to rollback all the edits they have done before save, they can call the function in below way:
-
-    grid.model.clearLazyData();
-
+```javascript
+     grid.model.clearLazyData();
+```
 By calling this funciton, all the edits will be roll back and the grid will the same as before editing. One thing need to note is that: unlike keeping calling undo() to roll back all the edits, clearLazyData will delete all the edits which means it can't be redo. So if you are sure you want to roll back to initial grid and don't want to keep those edits, you can call the clearLazyData.
 
-save
+**save**
 
 When user finish the edit work and decide to write back those edits to the store, they can call the function in the below way:
-        
-    grid.model.save();
+ ```javascript       
+     grid.model.save();
+```
 After calling this function, lazy data will be write back to store and all the edited data will ben removed.
 
 
