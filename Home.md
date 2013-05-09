@@ -21,7 +21,7 @@
 * [[v1.2] Use Gridx's lazy edit function ](https://github.com/oria/gridx/wiki/How-to-use-Gridx's-lazy-edit-function%3F%5Bv1.2%5D)
 
 #### API Doc
-* [gridx API doc] (http://oria.github.com/gridx/apidoc/index.html)
+* [Gridx API doc] (http://oria.github.com/gridx/apidoc/index.html)
 * [Keyboard Shortcut Guidance](https://github.com/oria/gridx/wiki/Gridx-a11y-keyboard-guidance)
 * [Modules Compatibility Matrix](http://oria.github.io/gridx/moduleCompatibility.html)
 
