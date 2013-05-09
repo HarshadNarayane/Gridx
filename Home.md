@@ -2,7 +2,7 @@
 
 #### Overview...
 * [Introduction to Gridx] (https://github.com/oria/gridx/wiki/Introduction-to-Gridx)
-* [Create the Simplest Gridx] (https://github.com/oria/gridx/wiki/Create-the-Simplest-Gridx)
+* [Create the simplest Gridx] (https://github.com/oria/gridx/wiki/Create-the-Simplest-Gridx)
 
 #### What is...
 * [Gridx Model] (https://github.com/oria/gridx/wiki/Gridx-Model)
