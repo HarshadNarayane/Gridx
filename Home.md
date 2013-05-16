@@ -6,6 +6,7 @@
 
 #### What is...
 * [Gridx Model] (https://github.com/oria/gridx/wiki/Gridx-Model)
+* [Gridx Module](https://github.com/oria/gridx/wiki/What-is-a-Gridx-module%3F)
 * [[v1.1] Supporting Widget] (https://github.com/oria/gridx/wiki/What-is-a-supporting-widget-of-gridx%3F-%5Bv1.1%5D)
 
 #### How to...
