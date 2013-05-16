@@ -22,8 +22,7 @@ If this function exists, it is called after all modules are "newed". Now the mod
 #### load()
 If this function exists, it is called after all modules are "preloaded", AND all the dependent modules of this module have finished "loading". In this function we can use more features that other modules provide, because they are ensured to be available now.
 
-Module dependency
-
+### Module dependency
 A module can depend on other modules, so that code can be more effectively reused. But this "dependency" should not be on the actual implementation, otherwise the "depended" modules would not be able to be replaced by new implementations.
 Gridx accomplishes this by "name dependency": a module only depends on the `name` of other modules. For example, PaginationBar module depends on Pagination module, which provides some useful paging functions. In the code of PaginationBar, the Pagination module is not even required, it just declares that it depends on any module that has a `name` of "pagination". So users can replace the default Pagination implementation with anything they like, as long as it provides similar API to support PaginationBar.
 And by this way, users can even replace any "core modules" (loaded-by-default modules). One example is the VirtualVScroller module, it is widely used to replace the default VScroller module, to provide "virtual scrolling" feature.
