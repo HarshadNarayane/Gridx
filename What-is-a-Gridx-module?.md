@@ -1,6 +1,6 @@
 Strictly speaking, a Gridx module is just a JavaScript class that defines a `name` property. This `name` property represents the "interface" of this module, or you can also regard it as a feature name. Two different modules can have the same name, meaning they implement the same feature in two different ways. But for each name, there is at most one effective module in a running gridx instance.
 
-But usually a Gridx module inherits from [gridx/core/_Module.js](https://github.com/oria/gridx/blob/master/core/_Module.js), which defines a bunch of useful methods for module developers, such as `connect()`, `subscribe()`, `arg()`, etc.
+But usually a Gridx module inherits from [gridx/core/_Module.js](https://github.com/oria/gridx/blob/master/core/_Module.js), which defines a bunch of useful methods for module developers, such as `[connect()](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#connect)`, `subscribe()`, `arg()`, etc.
 
 ### Module Life-cycle
 A Gridx module can have some optional life-cycle functions: `constructor()`, `preload()`, and `load()`. The creating process of gridx is just a process of creating all the modules, one by one, and "load" them according to their denpendancy order.
