@@ -1,9 +1,9 @@
-Strictly speaking, a Gridx module is just a JavaScript class that defines a `name` property. This `name` property represents the "interface" of this module, or you can also regard it as a feature name. Two different modules can have the same name, meaning they implement the same feature in two different ways. But for each name, there is at most one effective module in a running gridx instance.
+Strictly speaking, a Gridx module is just a JavaScript class that defines a [`name`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#name) property. This `name` property represents the "interface" of this module, or you can also regard it as a feature name. Two different modules can have the same name, meaning they implement the same feature in two different ways. But for each name, there is at most one effective module in a running gridx instance.
 
-But usually a Gridx module inherits from [gridx/core/_Module.js](https://github.com/oria/gridx/blob/master/core/_Module.js), which defines a bunch of useful methods for module developers, such as [`connect()`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#connect), `subscribe()`, `arg()`, etc.
+But usually a Gridx module inherits from [gridx/core/_Module.js](https://github.com/oria/gridx/blob/master/core/_Module.js), which defines a bunch of useful methods for module developers, such as [`connect()`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#connect), [`subscribe()`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#subscribe), [`arg()`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#arg), etc.
 
 ### Module Life-cycle
-A Gridx module can have some optional life-cycle functions: `constructor()`, `preload()`, and `load()`. The creating process of gridx is just a process of creating all the modules, one by one, and "load" them according to their denpendancy order.
+A Gridx module can have some optional life-cycle functions: `constructor()`, [`preload()`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#preload), and [`load()`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#load). The creating process of gridx is just a process of creating all the modules, one by one, and "load" them according to their denpendancy order.
 
 <pre>
 Gridx creation steps:
@@ -24,10 +24,10 @@ If this function exists, it is called after all modules are "preloaded", AND all
 
 ### Module dependency
 A module can depend on other modules, so that code can be more effectively reused. But this "dependency" should not be on the actual implementation, otherwise the "depended" modules would not be able to be replaced by new implementations.
-Gridx accomplishes this by "name dependency": a module only depends on the `name` of other modules. For example, PaginationBar module depends on Pagination module, which provides some useful paging functions. In the code of PaginationBar, the Pagination module is not even required, it just declares that it depends on any module that has a `name` of "pagination". So users can replace the default Pagination implementation with anything they like, as long as it provides similar API to support PaginationBar.
-And by this way, users can even replace any "core modules" (loaded-by-default modules). One example is the VirtualVScroller module, it is widely used to replace the default VScroller module, to provide "virtual scrolling" feature.
+Gridx accomplishes this by "name dependency": a module only depends on the `name` of other modules. For example, [PaginationBar](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/pagination/PaginationBar) module depends on [Pagination](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/Pagination) module, which provides some useful paging functions. In the code of PaginationBar, the Pagination module is not even required, it just declares that it depends on any module that has a `name` of "pagination". So users can replace the default Pagination implementation with anything they like, as long as it provides similar API to support PaginationBar.
+And by this way, users can even replace any "core modules" (loaded-by-default modules). One example is the [VirtualVScroller](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/VirtualVScroller) module, it is widely used to replace the default [VScroller](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/VScroller) module, to provide "virtual scrolling" feature.
 
-Every module can the following 3 optional properties to declare its dependancy: `forced`, `required`, and `optional`.
+Every module can the following 3 optional properties to declare its dependancy: [`forced`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#forced), [`required`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#required), and [`optional`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/_Module#optional).
 * `forced: ["header", "body"]` // means this module won't be loaded until "header" module and "body" module have finished loading.
 * `required: ["tree"]` // means this module requires the existance of "tree" module, but it can be loaded at any time.
 * `optional: ["edit"]` // means if some "edit" module exists, it must be loaded before this module.
@@ -51,13 +51,13 @@ var grid = new Grid({
 });
 </pre>
 
-Here we set the `triggerOnCell` property of the extendedSelect/Row module to be true. This is done by passing `selectRowTriggerOnCell: true` to grid. Note the pattern here is: 
+Here we set the [`triggerOnCell`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/extendedSelect/Row#triggerOnCell) property of the [extendedSelect/Row](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/extendedSelect/Row) module to be true. This is done by passing `selectRowTriggerOnCell: true` to grid. Note the pattern here is: 
 
 <pre>
 moduleName + moduleParameterName (camel format).
 </pre>
 
-Using this way you can also passing parameters to core modules that not explicitly declared in the modules array. In the above example it is the "rowHoverEffect" parameter of the "body" module: `bodyRowHoverEffect: false`.
+Using this way you can also passing parameters to core modules that not explicitly declared in the modules array. In the above example it is the "[rowHoverEffect](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/Body#rowHoverEffect)" parameter of the "body" module: `bodyRowHoverEffect: false`.
 
 Actually, module parameters can also be passed in the following way:
 
