@@ -71,7 +71,7 @@ What if you want the expansoes to appear somewhere else? Actually you can explic
 <pre>
 structure = [
           {id: 'id', name: 'id', field: 'id'},
-          {id: 'number', name: 'number', field: 'number', exandLevel: 'all'},
+          {id: 'number', name: 'number', field: 'number', <b>exandLevel: 'all'</b>},
           {id: 'string', name: 'string', field: 'string'},
           {id: 'date', name: 'date', field: 'date'},
           {id: 'time', name: 'time', field: 'time'},
@@ -79,13 +79,13 @@ structure = [
 ];
 </pre>
 
-"expandLevel" means what level of expando should this column show. The root level is 1, the second is 2, and so on. All other values for this parameter means "all levels". But since we haven't set "treeNested" to true, all we need is a true value here.
+[`expandLevel`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/Tree.__ColumnDefinition#expandLevel) means what level of expando should this column show. The root level is 1, the second is 2, and so on. All other values for this parameter means "all levels". But since we haven't set "treeNested" to true, all we need is a true value here.
 
 Now the expandoes are moved to the 2nd column:
 
 ![customize expando position](http://oria.github.io/gridx/tutor/image/gridx-14.png)
 
-Just now I mentioned "treeNested" parameter, which might make you confused. This is parameter of Tree module, but you can directly declare it as grid parameter:
+Just now I mentioned [`treeNested`](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/Tree#nested) parameter, which might make you confused. This is parameter of Tree module, but you can directly declare it as grid parameter:
 
 <pre>
 var grid = new Grid({
