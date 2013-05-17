@@ -16,6 +16,7 @@
 * [[v1.0] Customize sorting in Gridx](https://github.com/oria/gridx/wiki/How-to-Customize-Sorting-in-GridX%3F)
 * [[v1.0] Show widgets in Gridx cells](https://github.com/oria/gridx/wiki/How-to-show-widgets-in-gridx-cells%3F)
 * [[v1.0] Handle mouse and keyboard events](https://github.com/oria/gridx/wiki/How-to-handle-mouse-and-keyboard-events%3F)
+* [[v1.0] Create tree grid](https://github.com/oria/gridx/wiki/How-to-show-tree-structure%3F)
 * [[v1.1] Add bars to gridx] (https://github.com/oria/gridx/wiki/How-to-add-bars-to-gridx%3F-%5Bv1.1%5D)
 * [[v1.1] Make gridx scrollable on iPad] (https://github.com/oria/gridx/wiki/How-to-make-gridx-scrollable-on-iPad%3F-%5Bv1.1%5D)
 * [[v1.2] Add drop down menu on column headers](https://github.com/oria/gridx/wiki/Add-drop-down-menu-on-column-headers-%5Bv1.2%5D)
