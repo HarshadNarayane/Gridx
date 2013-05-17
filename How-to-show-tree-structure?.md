@@ -1,5 +1,6 @@
-The Tree module is needed to show tree structure in Gridx:
+The [Tree](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/Tree) module is needed to show tree structure in Gridx:
 
+<pre>
 var grid = new Grid({
      ......
      modules: [
@@ -7,6 +8,7 @@ var grid = new Grid({
      ],
      ......
 });
+</pre>
 
 But that's not enough, let's see what else should/could be done.
 
@@ -35,7 +37,7 @@ store.getChildren = function(item){
 };
 </pre>
 
-The hasChildren function should always work synchronously. Gridx need this function to tell whether a row has child rows. If you are using dojo/store/Memory and all the children data are stored are directly put a "children" field of every item, then this function could be written as:
+The [hasChildren](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/Tree.__TreeStoreMixin#hasChildren) function should always work synchronously. Gridx need this function to tell whether a row has child rows. If you are using dojo/store/Memory and all the children data are stored are directly put a "children" field of every item, then this function could be written as:
 
 <pre>
 store.hasChildren = function(id, item){
@@ -44,7 +46,7 @@ store.hasChildren = function(id, item){
 };
 </pre>
 
-The getChildren function should return an array of child items. But if your child data are on server, you might need to operate asynchronously here by returning a Deferred object:
+The [getChildren](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/Tree.__TreeStoreMixin#getChildren) function should return an array of child items. But if your child data are on server, you might need to operate asynchronously here by returning a Deferred object:
 
 <pre>
 store.getChildren = function(item){
