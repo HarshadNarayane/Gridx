@@ -83,7 +83,7 @@ But remember that the widgets ("cell widget" as a whole) are reused among differ
 }
 </pre>
 
-This seems not very straightforward, I admit. So in gridx 1.2 a new method (callback) is introduced to make this job simpler:
+This seems not very straightforward, I admit. So in gridx 1.2 a new method (callback) named getCellWidgetConnects is introduced to make this job simpler:
 
 <pre>
 { id: 'progress', field: 'progress', name: 'Install Progress',
