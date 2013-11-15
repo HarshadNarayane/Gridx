@@ -13,7 +13,7 @@ When used on mobile device, QuickFilter bar can be pulled out (or pushed into) g
 Provided an easy why to specify which column to use based on device orientation or customized conditions.
 #### [MultiChannel] Layer (experimental)
 Mobile version of tree grid. Only show one level of rows at a time.
-#### new grid properties:
+#### New Properties:
 * touch: true if grid is on a touch device, false otherwise. Also can be manually set when creating grid.
 * touchModules and desktopModules: only `touchModules` will be loaded when `grid.touch` is true; only `desktopModules` will be loaded when `grid.touch` is false. Note that `modules will always be loaded.
 
