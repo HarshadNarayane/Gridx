@@ -24,7 +24,7 @@ Mobile version of tree grid. Only show one level of rows at a time.
 * Module-Set declaration
 
 ## Minor Improvements:
-* Removed gridx/resources/Gridx_rtl.css and gridx/resources/claro/Gridx_rtl.css. Only one css file is needed, rlt support is already built in it.
+* Removed gridx/resources/Gridx_rtl.css and gridx/resources/claro/Gridx_rtl.css. Only one css file is needed (a.k.a gridx/resources/claro/Gridx.css), rlt support is already built in it.
 * Sync cache is loaded by default. No need to declare `cacheClass:Sync` anymore.
 
 ## Refactored Features:
