@@ -20,9 +20,9 @@ Based on GroupHeader and HiddenColumns to implement column expanding and collaps
 
 ## Minor Improvements:
 * Removed gridx/resources/Gridx_rtl.css and gridx/resources/claro/Gridx_rtl.css.
-    Only one css file is needed, rlt support is already built in it.
+    ** Only one css file is needed, rlt support is already built in it.
 * Sync cache is loaded by default.
-    No need to declare cacheClass: Sync anymore.
+    ** No need to declare cacheClass: Sync anymore.
 
 ## Refactored Features:
 Pull out the common parts of PagedBody and AutoPagedBody to be a base mixin _PagedBodyMixin.
