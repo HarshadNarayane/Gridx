@@ -4,7 +4,7 @@ In Gridx, you can customize the sorting order of any column if you are using a c
 var grid = new Grid({
     ......
     modelExtensions: [
-           "gridx/core/model/extension/FormatSort"  // Just like other modules, don't forget to require it first.
+           "gridx/core/model/extensions/FormatSort"  // Just like other modules, don't forget to require it first.
     ],
     ......
 });
