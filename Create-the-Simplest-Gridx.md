@@ -7,7 +7,7 @@ There are 5 things to be prepared before creating a Gridx. Well, believe me, I'm
 ## a) A store
 Create a store from dojo/store/*, dojo/data/*, or dojox/data/*.
 Gridx, inheriting the idea of DataGrid, is just a view of the store. So create one, for example, like this:
-
+```js
 	//Use dojo/store/Memory here
 	var store = new Memory({
 		data: [
@@ -18,30 +18,31 @@ Gridx, inheriting the idea of DataGrid, is just a view of the store. So create o
 			{ id: 5, name: 'Tom', score: 89, city: 'San Francisco', birthday: '1990/1/21'}
 		]
 	});
-
+```
 A Memory store is a client side store, which is as simple as an array with some easy to use APIs.
 
 ## b) A column structure
 Define the columns in an array. A column can be a direct mapping of a field in store, which is the most common case. If this "field" is not provided, there should be something else to tell the grid what to show in that column.
-
+```js
 	var structure = [
 		{ id: 'name', field: 'name', name: 'Name', width: '50px'},
 		{ id: 'city', field: 'city', name: 'City'},
 		{ id: 'score', field: 'score', name: 'Score', width: '80px'}
 	];
-
+```
 It's a good practice to provide a meaningful unique ID for every column, so that you can uniquely refer to a column at anytime, no matter where it is moved or how it is modified. If omitted, the grid will use "1", "2", "3", ... as IDs for columns.
 
 ## c) A cache implementation
 Server side stores and client side stores are totally different, so different logics are provided to handle them. If you are using only a simple client store, like Memory, there's no need to do any lazy-loading stuff. So tell the grid what kind of store you are using by providing different cache implementations.
-
+```js
 	//We are using Memory store, so everything is synchronous.
 	var cacheClass = "gridx/core/model/cache/Sync";
+```
 
 By the way, do NOT forget to "require" this class, the grid won't automatically load it for you.
 
 If you are using AMD style of coding, it's also a good practice to assign the required cache class to an argument, and use that argument directly:
-
+```js
 	require([
 		......
 		"gridx/core/model/cache/Sync",
@@ -54,11 +55,11 @@ If you are using AMD style of coding, it's also a good practice to assign the re
 
 		......
 	});
-
+```
 ## d) CSS files
 
 Import CSS files of Gridx into your html file:
-
+```html
 	<style type="text/css">
 		/*Use claro theme.*/
 		@import "your/path/to/dijit/themes/claro/claro.css";
@@ -70,19 +71,19 @@ Import CSS files of Gridx into your html file:
 		/*import RTL css if you need to support rtl.*/
 		@import "your/path/to/gridx/resources/claro/Gridx_rtl.css";
 	</style>
-
+```
 ## e) Grid width and height
 Gridx does not have a default width or height, which is different from the old DataGrid. So you need to provide them, in anyway you like. For example, in CSS:
-
+```css
 	.gridx {
 		width: 400px;
 		height: 200px;
 	}
-
+```
 
 # 2. Creation
 When everything is prepared, we can start creating our grid:
-
+```js
 	require([
 		//Require resources.
 		"dojo/store/Memory",
@@ -107,7 +108,7 @@ When everything is prepared, we can start creating our grid:
 		//Start it up.
 		grid.startup();
 	});
-
+```
 Never forget to call grid.startup(), since the column width calculation and layout rendering need to access the geometry information of grid DOM nodes.
 
 # 3. Run the page
