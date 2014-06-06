@@ -6,42 +6,32 @@ This article is a brief introduction on how to use Gridx. Gridx is still under d
 
 ## 1. Creation
 Assume we have an HTML page like this:
-<pre>
-&lt;html&gt;
-&lt;head&gt;
-	&lt;title&gt;Gridx Demo&lt;/title&gt;
-	&lt;script type=&quot;text/javascript&quot; src=&quot;dojo/dojo.js&quot; data-dojo-config=&quot;async: true&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;!-- We&#039;d like to show a grid here --&gt;
-	&lt;div id=&quot;gridNode&quot; style=&quot;width: 400px; height: 300px;&quot;&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<html>
+<head>
+    <title>Gridx Demo</title>
+    <script type="text/javascript" src="dojo/dojo.js" data-dojo-config="async: true"></script>
+</head>
+<body>
+    <!-- We'd like to show a grid here -->
+    <div id="gridNode" style="width: 400px; height: 300px;"></div>
+</body>
+</html>
+
+```
 First, let's import the CSS file for Gridx:
-<pre>
-&lt;link rel="stylesheet" href="gridx/resources/claro/Gridx.css" /&gt;
-</pre>
+```html
+<link rel="stylesheet" href="gridx/resources/claro/Gridx.css" />
+```
+
 Currently only claro theme is available. If you need to run grid in RTL mode, please use the following instead:
-<pre>
-&lt;link rel="stylesheet" href="gridx/resources/claro/Gridx_rtl.css" /&gt;
-</pre>
+```html
+<link rel="stylesheet" href="gridx/resources/claro/Gridx_rtl.css" />
+```
 
 And another important step - GridX needs an explicit width/height setting:
-<pre>
-&lt;style type="text/css"&gt;
-/*applied to a single gridx instance by ID*/
-#grid {
-	height: 100%;
-	width: 100%;
-}
-/* or applied to all gridx instances*/
-.gridx { 
-	height: 100%;
-	width: 100%;
-}
-&lt;/style&gt;
-</pre>
+```html
+```
 
 The JavaScript modules we must "require" are:<br />
 1) A kind of store, for example: dojo/store/Memory<br />
