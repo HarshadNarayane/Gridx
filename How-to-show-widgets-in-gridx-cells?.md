@@ -11,7 +11,7 @@ So the goal of the CellWidget module is to create as few widgets as possible. Th
 
 ## How to use CellWidget
 Setting value to a widget is usually much faster than creating a new one. This is good idea, but it also requires the user to be aware of this "reusing" thing. Let's see how to use the CellWidget module first:
-### <a id="contact_form"></a>Contact form
+
 ```js
 var grid = new Grid({
   cacheClass: 'gridx/core/model/cache/Async',
@@ -60,6 +60,8 @@ In the above example, things are simple because no data converting is needed bef
 
 The **setCellValue** function will get called every time a row is rendered. When it is called, the widget is already created and you have full control of it. You can set values to the widgets, modify css, or even manipulate the dom nodes and connecting events. The third parameter "cellWidget" in this function refers to the "cell widget" itself, it is the widget that owns the template string returned from the "decorator" function, so you can access any "dojo attach point" defined there. The first and second parameters are grid data and store data for this current cell respectively. They are only different when the "formatter" function is provided. You can also get the current cell from `cellWidget.cell`, from which you can literally get everything you need.
 <a id="events"></a>
+
+<a name='events'></a>
 ### How to handle widget events
 But remember that the widgets ("cell widget" as a whole) are reused among different rows. So if you bind some events or changed some dom nodes in the **setCellValue** function, these changes will be retained for another row to be reused. If you just keep "connecting" events without "disconnecting", there will be huge memory leak. So the proper way is to save the connections and disconnect them in setCellValue. For example
 
