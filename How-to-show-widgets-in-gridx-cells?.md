@@ -11,7 +11,7 @@ So the goal of the CellWidget module is to create as few widgets as possible. Th
 
 ## How to use CellWidget
 Setting value to a widget is usually much faster than creating a new one. This is good idea, but it also requires the user to be aware of this "reusing" thing. Let's see how to use the CellWidget module first:
-
+### <a id="contact_form"></a>Contact form
 ```js
 var grid = new Grid({
   cacheClass: 'gridx/core/model/cache/Async',
