@@ -23,11 +23,11 @@ Note the "RowHeaderHeader" and "RowHeaderCell" events are only available when th
 
 To add handler for any of these events, just connect it on the grid object:
 
-<pre>
+```js
 grid.connect(grid, "onCellMouseOver", function(evt){
      // your handler logic here.
 });
-</pre>
+```
 
 Note it is a good practice to use `grid.connect` instead of `dojo.connect`, because grid as a widget can automatically disconnect all the event connections when it is destroyed, so that memory leak can be avoided.
 
@@ -49,9 +49,9 @@ An event object is passed to your handler function, in which several useful prop
 
 With the above information, you can easily get whatever you want. For example:
 
-<pre>
+```js
 var cell = grid.cell(evt.rowId, evt.columnId, true);
 var cellData = cell.data();
 var isRowSelected = cell.row.isSelected();
 var headerName = cell.column.name();
-</pre>
+```
