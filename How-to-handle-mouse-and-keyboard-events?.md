@@ -33,7 +33,7 @@ require(['dojo/on'], function(on){
 ```
 ## grid.on
 ```js
-grid.on(rowMouseOver", function(evt){
+grid.on("rowMouseOver", function(evt){
      // your handler logic here.
 });
 ```
