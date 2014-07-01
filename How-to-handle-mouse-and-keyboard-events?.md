@@ -14,22 +14,47 @@ All the following mouse and keyboard events are supported for different parts of
 <tr><td><b>KeyPress</b></td><td>Y</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr>
 </table>
 
-
-The naming convertion is: <b>"on" + regionName + eventName</b>. 
+The naming convertion is: **"on" + regionName + eventName**. 
 
 For example: **onCellClick**, **onHeaderCellMouseOver**, **onRowKeyDown**, **onRowHeaderHeaderClick**.
 
 Note the "RowHeaderHeader" and "RowHeaderCell" events are only available when the **gridx/modules/RowHeader** is used.
 
-To add handler for any of these events, just connect it on the grid object:
+To add handler for any of these events, there are **4 ways** to accomplish it:
 
+## dojo/on
+
+```js
+require(['dojo/on'], function(on){
+	on(grid.domNode, 'rowClick', function(e){
+		//your handler logic here...
+	})
+})
+```
+## grid.on
+```js
+grid.on(rowMouseOver", function(evt){
+     // your handler logic here.
+});
+```
+## dojo/connect
+```js
+dojo.connect(grid, "onCellMouseOver", function(evt){
+     // your handler logic here.
+});
+```
+## grid.connect
 ```js
 grid.connect(grid, "onCellMouseOver", function(evt){
      // your handler logic here.
 });
 ```
 
-Note it is a good practice to use `grid.connect` instead of `dojo.connect`, because grid as a widget can automatically disconnect all the event connections when it is destroyed, so that memory leak can be avoided.
+###Tips:
+
+* Using ``on`` has different event name with using ``connect``. In ``dojo/on`` or ``grid.on``, you can should remove the prefix **on**. For example, in ``dojo/connect`` the event name is **'onRowClick'** while you should use **'rowClick'** instead in ``dojo/on``. 
+
+* It is a good practice to use `grid.connect` or `grid.on` instead of `dojo.connect` and `dojo/on`, because grid as a widget can automatically disconnect all the event connections when it is destroyed, so that memory leak can be avoided.
 
 An event object is passed to your handler function, in which several useful properties are already available:
 
