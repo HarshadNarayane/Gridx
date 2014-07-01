@@ -16,5 +16,5 @@ In Firefox >= 8 you must add this code in your css
     margin:0px;
     padding:0px;
     border:0px;
-display:none; 
+
 }
