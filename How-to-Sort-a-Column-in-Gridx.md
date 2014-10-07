@@ -143,4 +143,10 @@ If this parameter is provided, the grid will also appear sorted when created, bu
 ## Preventing a column from being sorted
 It is not uncommon that we want to prevent a column from being able to be selected for sorting.  For example, if we have a column that contains a graphic or a button, it usually doesn't make sense to sort on that column.  Even if there is no change to apparent row order, it may still show that column as the current one sorted.
 
-When we include SingleSort as a module, a new property is available in the column definition specification.  That property is called `sortable` and is a boolean.  If we set it to `false` (the default is `true`) then the column will no longer be eligible to be sorted.(Very important note from Max Shalima: to set this property it is necessary to use setSortable method otherwise you will not see any effect).
+When we include SingleSort as a module, a new property is available in the column definition specification.  That property is called `sortable` and is a boolean.  If we set it to `false` (the default is `true`) then the column will no longer be eligible to be sorted.
+
+(A very important note from Max Shalima: to set this property it is necessary to use setSortable method otherwise you will not see any effect.
+e.g. : 
+grid.column(1).sortable = false;   // - will not have any effect
+grid.column(1).setSortable(false); // - sorting will be disabled for the column
+).
