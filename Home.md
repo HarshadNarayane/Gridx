@@ -1,4 +1,4 @@
-#### Welcome to [gridx documentation home](https://github.com/oria/gridx/wiki), we are still in progress to enrich the doc.
+#### Welcome to [gridx documentation home](https://github.com/oria/gridx/wiki), we are still in progress to enrich the docs.
 
 #### Overview...
 * [Introduction to Gridx] (https://github.com/oria/gridx/wiki/Introduction-to-Gridx)
