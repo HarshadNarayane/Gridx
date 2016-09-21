@@ -99,7 +99,7 @@ This seems not very straightforward, I admit. So in gridx 1.2 a new method (call
   getCellWidgetConnects: function(cellWidget, cell){
     // return an array of connection arguments
     return [
-      [cellWidget.btn, 'onClick', function(e){
+      [cellWidget.btn, 'onClick', function(e){ // or 'click', if you connect to a DOM node.
         alert(cell.data());
         // do your job here.....
       }]
