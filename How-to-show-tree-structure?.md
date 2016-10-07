@@ -71,7 +71,7 @@ What if you want the expansoes to appear somewhere else? Actually you can explic
 <pre>
 structure = [
           {id: 'id', name: 'id', field: 'id'},
-          {id: 'number', name: 'number', field: 'number', <b>exandLevel: 'all'</b>},
+          {id: 'number', name: 'number', field: 'number', <b>expandLevel: 'all'</b>},
           {id: 'string', name: 'string', field: 'string'},
           {id: 'date', name: 'date', field: 'date'},
           {id: 'time', name: 'time', field: 'time'},
@@ -102,11 +102,11 @@ Users can also explicitly declare which columns should the expandoes be shown:
 
 <pre>
 structure = [
-          {id: 'id', name: 'id', field: 'id', <b>exandLevel: 1</b>},
+          {id: 'id', name: 'id', field: 'id', <b>expandLevel: 1</b>},
           {id: 'number', name: 'number', field: 'number'},
-          {id: 'string', name: 'string', field: 'string', <b>exandLevel: 2</b>},
+          {id: 'string', name: 'string', field: 'string', <b>expandLevel: 2</b>},
           {id: 'date', name: 'date', field: 'date'},
-          {id: 'time', name: 'time', field: 'time', <b>exandLevel: 3</b>},
+          {id: 'time', name: 'time', field: 'time', <b>expandLevel: 3</b>},
           {id: 'bool', name: 'bool', field: 'bool'}
 ];
 </pre>
