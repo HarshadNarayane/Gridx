@@ -50,7 +50,7 @@ Lazy edit feature provide user with some useful API to get some edit funcionalit
 To programatically make a change in laziness powered model of gridx make an use of [set](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/model/extensions/Modify) function.
 
 To connect CheckBox added to gridx with CellWidget add the following function inside the structure definition: 
-```
+```javascript
 getCellWidgetConnects: function(cellWidget, cell){      	   
     return [
             [cellWidget.{{checkBoxAttachPoint}}, 'onChange', function(e){
