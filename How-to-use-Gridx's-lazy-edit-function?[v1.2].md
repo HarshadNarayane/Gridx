@@ -45,6 +45,21 @@ By doing the above processes, if you can run gridx successfully, you can start u
 
 Lazy edit feature provide user with some useful API to get some edit funcionality that is easy to use. They are undo(), redo(), save(), clear(). Those APIs are not binded to the gridx.edit object. Since those funcitonality are related to data layer directly, so those APIs are binded to the gridx.model. The model is a core module in gridx for data access.
 
+**set**
+
+To programatically make a change in laziness powered model of gridx make an use of [set](http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/core/model/extensions/Modify) function.
+
+To connect CheckBox added to gridx with CellWidget add the following function inside the structure definition: 
+```
+getCellWidgetConnects: function(cellWidget, cell){      	   
+    return [
+            [cellWidget.{{checkBoxAttachPoint}}, 'onChange', function(e){
+	    cell.grid.model.set(cell.row.id, {{{field name}}: e});
+        }]
+    ];
+},
+```
+
 **undo**
 
 When user edit some cell data and what to roll back to the last cell status. They can call the function in below way:
